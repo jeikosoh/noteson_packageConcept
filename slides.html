@@ -22,18 +22,7 @@
         <span class="view-title">PACKAGE CONCEPT</span>
       </div>
       
-      <div class="header-right" style="display: flex; gap: 12px;">
-        <!-- 전체화면 토글 버튼 -->
-        <button id="fullscreen-toggle" class="fullscreen-toggle-btn" aria-label="전체화면 전환">
-          <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
-          </svg>
-          <svg class="shrink-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
-            <path d="M4 14h6v6m10-6h-6v6M4 10h6V4m10 6h-6V4"></path>
-          </svg>
-          <span class="fullscreen-text">FULLSCREEN</span>
-        </button>
-
+      <div class="header-right">
         <!-- 테마 토글 버튼 (Light/Dark) -->
         <button id="theme-toggle" class="theme-toggle-btn" aria-label="테마 전환">
           <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -80,6 +69,19 @@
         </svg>
       </button>
     </main>
+
+    <!-- 전체화면 필(Pill) 모양 액션 바 -->
+    <div class="slides-action-bar">
+      <button id="fullscreen-toggle" class="fullscreen-pill-btn" aria-label="전체화면 전환">
+        <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+        </svg>
+        <svg class="shrink-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+          <path d="M4 14h6v6m10-6h-6v6M4 10h6V4m10 6h-6V4"></path>
+        </svg>
+        <span class="fullscreen-text">FULLSCREEN</span>
+      </button>
+    </div>
 
     <!-- Footer Controls -->
     <footer class="slides-footer">
