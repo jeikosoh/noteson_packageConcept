@@ -179,6 +179,7 @@ html.dark-mode .slide-viewport {
   object-fit: contain;
   border-radius: 8px;
   user-select: none;
+  transform: scale(1.05); /* 상하단 템플릿 선 크롭용 미세 확대 */
 }
 
 /* 컨트롤 네비게이션 버튼 */
