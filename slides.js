@@ -12,6 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const thumbItems = document.querySelectorAll('.thumb-item');
   const thumbnailsContainer = document.querySelector('.thumbnails-container');
 
+  // 전체화면 관련 DOM
+  const slidesApp = document.querySelector('.slides-app');
+  const fullscreenToggle = document.getElementById('fullscreen-toggle');
+  const expandIcon = fullscreenToggle.querySelector('.expand-icon');
+  const shrinkIcon = fullscreenToggle.querySelector('.shrink-icon');
+  const fullscreenText = fullscreenToggle.querySelector('.fullscreen-text');
+
   // === 2. 상태 변수 ===
   let currentIndex = 0;
   const totalSlides = thumbItems.length;
@@ -56,6 +63,31 @@ document.addEventListener('DOMContentLoaded', () => {
     themeText.textContent = 'DARK MODE';
     localStorage.setItem('noteson-slides-theme', 'light');
   }
+
+  // === 3-1. 전체화면 토글 제어 ===
+  fullscreenToggle.addEventListener('click', toggleFullscreen);
+
+  function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+      slidesApp.requestFullscreen().catch(err => {
+        console.error(`전체화면 모드 진입 실패: ${err.message}`);
+      });
+    } else {
+      document.exitFullscreen();
+    }
+  }
+
+  document.addEventListener('fullscreenchange', () => {
+    if (document.fullscreenElement) {
+      expandIcon.style.display = 'none';
+      shrinkIcon.style.display = 'block';
+      fullscreenText.textContent = 'EXIT FULL';
+    } else {
+      expandIcon.style.display = 'block';
+      shrinkIcon.style.display = 'none';
+      fullscreenText.textContent = 'FULLSCREEN';
+    }
+  });
 
   // === 4. 슬라이드 전환 핵심 로직 (View Transitions API 적용) ===
   function goToSlide(newIndex, direction) {
