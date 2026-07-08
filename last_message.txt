@@ -1,0 +1,154 @@
+<USER_REQUEST>
+다이나믹 레이블 다 고쳤어?
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-07-02T15:22:28-04:00.
+
+The user's current state is as follows:
+Active Document: /Users/jeikosoh/Work Station/002_NOTES_ON/NOTES_ON_WEB/_converts/vid_player_data2.json (LANGUAGE_JSON)
+Cursor is on line: 1
+Other open documents:
+- /Users/jeikosoh/Work Station/002_NOTES_ON/figma-sync.js (LANGUAGE_JAVASCRIPT)
+- /Users/jeikosoh/Work Station/002_NOTES_ON/index.html (LANGUAGE_HTML)
+- /Users/jeikosoh/Work Station/002_NOTES_ON/figma-pull.js (LANGUAGE_JAVASCRIPT)
+- /Users/jeikosoh/Work Station/002_NOTES_ON/figma-build.js (LANGUAGE_JAVASCRIPT)
+- /Users/jeikosoh/Work Station/990_PLUG_IN/FIGMA_PLUG/FIGMA HTML PLUG-IN.md (LANGUAGE_MARKDOWN)
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from None to Gemini 3.1 Pro (High). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>
+<USER_REQUEST>
+레이블 위치를 - 24px로 해줘
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-07-02T15:27:08-04:00.
+
+The user's current state is as follows:
+Active Document: /Users/jeikosoh/Work Station/002_NOTES_ON/NOTES_ON_WEB/_converts/vid_player_data2.json (LANGUAGE_JSON)
+Cursor is on line: 1
+Other open documents:
+- /Users/jeikosoh/Work Station/002_NOTES_ON/index.css (LANGUAGE_CSS)
+- /Users/jeikosoh/Work Station/002_NOTES_ON/figma-config.json (LANGUAGE_JSON)
+- /Users/jeikosoh/Work Station/002_NOTES_ON/figma-sync.js (LANGUAGE_JAVASCRIPT)
+- /Users/jeikosoh/Work Station/002_NOTES_ON/index.html (LANGUAGE_HTML)
+- /Users/jeikosoh/Work Station/002_NOTES_ON/figma-pull.js (LANGUAGE_JAVASCRIPT)
+</ADDITIONAL_METADATA>
+<USER_REQUEST>
+"seasonal tea :" 영역은 product title
+그 아래는 product name이야.
+
+1. product title의 배경(오랜지 블록)을 중앙정렬해줘.
+
+2. 오랜지블록의 투명도를 90%호 해줘.
+
+3. 레이블 간격을 -48px로 해줘
+
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-07-02T15:31:25-04:00.
+
+The user's current state is as follows:
+Active Document: /Users/jeikosoh/Work Station/002_NOTES_ON/NOTES_ON_WEB/_converts/vid_player_data2.json (LANGUAGE_JSON)
+Cursor is on line: 1
+Other open documents:
+- /Users/jeikosoh/Work Station/002_NOTES_ON/figma-build.js (LANGUAGE_JAVASCRIPT)
+- /Users/jeikosoh/Work Station/990_PLUG_IN/FIGMA_PLUG/FIGMA HTML PLUG-IN.md (LANGUAGE_MARKDOWN)
+- /Users/jeikosoh/Work Station/002_NOTES_ON/index.css (LANGUAGE_CSS)
+- /Users/jeikosoh/Work Station/002_NOTES_ON/figma-config.json (LANGUAGE_JSON)
+- /Users/jeikosoh/Work Station/002_NOTES_ON/figma-sync.js (LANGUAGE_JAVASCRIPT)
+</ADDITIONAL_METADATA>
+<USER_REQUEST>
+1. product title에서 ":" 지워줘.
+2. 오랜지 블록과 product name의 간격을 16px
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-07-02T16:07:55-04:00.
+
+The user's current state is as follows:
+Active Document: /Users/jeikosoh/Work Station/002_NOTES_ON/NOTES_ON_WEB/_converts/vid_player_data2.json (LANGUAGE_JSON)
+Cursor is on line: 1
+Other open documents:
+- /Users/jeikosoh/Work Station/002_NOTES_ON/figma-sync.js (LANGUAGE_JAVASCRIPT)
+- /Users/jeikosoh/Work Station/002_NOTES_ON/index.html (LANGUAGE_HTML)
+- /Users/jeikosoh/Work Station/002_NOTES_ON/figma-pull.js (LANGUAGE_JAVASCRIPT)
+- /Users/jeikosoh/Work Station/002_NOTES_ON/figma-build.js (LANGUAGE_JAVASCRIPT)
+- /Users/jeikosoh/Work Station/990_PLUG_IN/FIGMA_PLUG/FIGMA HTML PLUG-IN.md (LANGUAGE_MARKDOWN)
+</ADDITIONAL_METADATA>
+<USER_REQUEST>
+dynamic label의 하단이 프로덕카드의 이미지의 하단으로부터 20%x 위에 위치하도록 해줘.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-07-02T16:11:54-04:00.
+
+The user's current state is as follows:
+Active Document: /Users/jeikosoh/Work Station/002_NOTES_ON/NOTES_ON_WEB/_converts/vid_player_data2.json (LANGUAGE_JSON)
+Cursor is on line: 1
+Other open documents:
+- /Users/jeikosoh/Work Station/002_NOTES_ON/figma-pull.js (LANGUAGE_JAVASCRIPT)
+- /Users/jeikosoh/Work Station/002_NOTES_ON/figma-build.js (LANGUAGE_JAVASCRIPT)
+- /Users/jeikosoh/Work Station/990_PLUG_IN/FIGMA_PLUG/FIGMA HTML PLUG-IN.md (LANGUAGE_MARKDOWN)
+- /Users/jeikosoh/Work Station/002_NOTES_ON/index.css (LANGUAGE_CSS)
+- /Users/jeikosoh/Work Station/002_NOTES_ON/figma-config.json (LANGUAGE_JSON)
+</ADDITIONAL_METADATA>
+<USER_REQUEST>
+오랜지블록을 overlay해볼까?
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-07-02T16:13:38-04:00.
+
+The user's current state is as follows:
+Active Document: /Users/jeikosoh/Work Station/002_NOTES_ON/NOTES_ON_WEB/_converts/vid_player_data2.json (LANGUAGE_JSON)
+Cursor is on line: 1
+Other open documents:
+- /Users/jeikosoh/Work Station/002_NOTES_ON/figma-sync.js (LANGUAGE_JAVASCRIPT)
+- /Users/jeikosoh/Work Station/002_NOTES_ON/index.html (LANGUAGE_HTML)
+- /Users/jeikosoh/Work Station/002_NOTES_ON/figma-pull.js (LANGUAGE_JAVASCRIPT)
+- /Users/jeikosoh/Work Station/002_NOTES_ON/figma-build.js (LANGUAGE_JAVASCRIPT)
+- /Users/jeikosoh/Work Station/990_PLUG_IN/FIGMA_PLUG/FIGMA HTML PLUG-IN.md (LANGUAGE_MARKDOWN)
+</ADDITIONAL_METADATA>
+<USER_REQUEST>
+제대로 적용된거 맞아??
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-07-02T16:14:36-04:00.
+
+The user's current state is as follows:
+Active Document: /Users/jeikosoh/Work Station/002_NOTES_ON/NOTES_ON_WEB/_converts/vid_player_data2.json (LANGUAGE_JSON)
+Cursor is on line: 1
+Other open documents:
+- /Users/jeikosoh/Work Station/002_NOTES_ON/figma-build.js (LANGUAGE_JAVASCRIPT)
+- /Users/jeikosoh/Work Station/990_PLUG_IN/FIGMA_PLUG/FIGMA HTML PLUG-IN.md (LANGUAGE_MARKDOWN)
+- /Users/jeikosoh/Work Station/002_NOTES_ON/index.css (LANGUAGE_CSS)
+- /Users/jeikosoh/Work Station/002_NOTES_ON/figma-config.json (LANGUAGE_JSON)
+- /Users/jeikosoh/Work Station/002_NOTES_ON/figma-sync.js (LANGUAGE_JAVASCRIPT)
+</ADDITIONAL_METADATA>
+<USER_REQUEST>
+1. product name이 가장자리에서 두줄로 바뀔때 글줄간격이 몇이야?
+
+2. 오버레이효과를 오랜지 블록에만 적용해줘
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-07-02T16:16:05-04:00.
+
+The user's current state is as follows:
+Active Document: /Users/jeikosoh/Work Station/002_NOTES_ON/NOTES_ON_WEB/_converts/vid_player_data2.json (LANGUAGE_JSON)
+Cursor is on line: 1
+Other open documents:
+- /Users/jeikosoh/Work Station/002_NOTES_ON/figma-pull.js (LANGUAGE_JAVASCRIPT)
+- /Users/jeikosoh/Work Station/002_NOTES_ON/figma-build.js (LANGUAGE_JAVASCRIPT)
+- /Users/jeikosoh/Work Station/990_PLUG_IN/FIGMA_PLUG/FIGMA HTML PLUG-IN.md (LANGUAGE_MARKDOWN)
+- /Users/jeikosoh/Work Station/002_NOTES_ON/index.css (LANGUAGE_CSS)
+- /Users/jeikosoh/Work Station/002_NOTES_ON/figma-config.json (LANGUAGE_JSON)
+</ADDITIONAL_METADATA>
+<USER_REQUEST>
+됐나? 너가 복구해- 너가 지워놓고 왜 나한테 그래
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-07-02T16:29:25-04:00.
+
+The user's current state is as follows:
+Active Document: /Users/jeikosoh/Work Station/002_NOTES_ON/index.html (LANGUAGE_HTML)
+Cursor is on line: 5
+Other open documents:
+- /Users/jeikosoh/Work Station/002_NOTES_ON/index.html (LANGUAGE_HTML)
+</ADDITIONAL_METADATA>

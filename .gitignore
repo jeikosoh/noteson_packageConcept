@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Secrets
+figma-config.json
+
+# Local / Temp Files
+_BACKUPS/
+.DS_Store
+*.log
+scratch/
+all_code.txt
+all_replacements.txt
+full_diff.txt
+full_diff_fixed.txt
+user_diff.txt
+system_diff.txt
+temp.js
+temp2.js
+recovered_*
+extracted_*
+figma-dump.json

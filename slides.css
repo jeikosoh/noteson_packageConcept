@@ -1,0 +1,470 @@
+/* ==========================================================================
+   NOTES ON - Slides Viewer Stylesheet
+   ========================================================================== */
+
+/* 1. 디자인 시스템 변수 정의 */
+:root {
+  --color-orange: #ff4000;
+  
+  /* 라이트 모드 (기본) */
+  --bg-color: #fcf5e5;
+  --text-color: #111111;
+  --border-color: rgba(255, 64, 0, 0.2);
+  --border-color-opaque: rgba(255, 64, 0, 0.4);
+  --btn-bg: rgba(255, 64, 0, 0.05);
+  --btn-hover-bg: rgba(255, 64, 0, 0.1);
+  --thumb-inactive-opacity: 0.5;
+  --progress-bg: rgba(255, 64, 0, 0.1);
+}
+
+html.dark-mode {
+  /* 다크 모드 */
+  --bg-color: #111111;
+  --text-color: #fcf5e5;
+  --border-color: rgba(252, 245, 229, 0.2);
+  --border-color-opaque: rgba(252, 245, 229, 0.4);
+  --btn-bg: rgba(252, 245, 229, 0.05);
+  --btn-hover-bg: rgba(252, 245, 229, 0.1);
+  --thumb-inactive-opacity: 0.4;
+  --progress-bg: rgba(252, 245, 229, 0.1);
+}
+
+/* 2. 전역 스타일 초기화 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Pretendard', 'Inter', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slides-app {
+  width: 100%;
+  max-width: 1200px;
+  height: 100vh;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* 3. 헤더 영역 */
+.slides-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 12px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: -0.03em;
+  transition: opacity 0.2s ease;
+}
+
+.logo-link:hover {
+  opacity: 0.8;
+}
+
+.header-divider {
+  width: 2px;
+  height: 24px;
+  background-color: var(--color-orange);
+}
+
+.view-title {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+/* 테마 토글 버튼 */
+.theme-toggle-btn {
+  background: var(--btn-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 8px 16px;
+  border-radius: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.theme-toggle-btn:hover {
+  background: var(--btn-hover-bg);
+  border-color: var(--border-color-opaque);
+  transform: translateY(-1px);
+}
+
+.theme-toggle-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* 4. 메인 슬라이드 영역 */
+.slides-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  position: relative;
+  min-height: 0; /* flex-child height overflow 방지 */
+}
+
+/* 슬라이드 뷰포트 */
+.slide-viewport {
+  flex: 1;
+  aspect-ratio: 16 / 10;
+  max-height: 60vh;
+  border: 1px solid var(--border-color);
+  background-color: rgba(0, 0, 0, 0.03);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+  position: relative;
+}
+
+html.dark-mode .slide-viewport {
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.slide-stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  view-transition-name: slide-view; /* View Transition 이름 부여 */
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  user-select: none;
+}
+
+/* 컨트롤 네비게이션 버튼 */
+.nav-btn {
+  background: var(--btn-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.nav-btn:hover {
+  background: var(--color-orange);
+  color: #ffffff;
+  border-color: var(--color-orange);
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px rgba(255, 64, 0, 0.3);
+}
+
+.nav-btn svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+
+.prev-btn:hover svg {
+  transform: translateX(-2px);
+}
+
+.next-btn:hover svg {
+  transform: translateX(2px);
+}
+
+/* 5. 푸터 영역 */
+.slides-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 16px;
+}
+
+/* 메타 정보 및 프로그레스 바 */
+.footer-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.slide-counter {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+#current-index-display {
+  color: var(--color-orange);
+}
+
+.counter-divider {
+  opacity: 0.3;
+}
+
+.progress-bar-container {
+  flex: 1;
+  height: 4px;
+  background-color: var(--progress-bg);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: var(--color-orange);
+  border-radius: 2px;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 썸네일 컨테이너 */
+.thumbnails-container {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  /* 가로 스크롤바 미려하게 스타일링 */
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color) transparent;
+}
+
+.thumbnails-container::-webkit-scrollbar {
+  height: 4px;
+}
+
+.thumbnails-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.thumbnails-container::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  border-radius: 4px;
+}
+
+.thumbnails-track {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  padding: 4px 0;
+}
+
+/* 개별 썸네일 아이템 */
+.thumb-item {
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  width: 88px;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  opacity: var(--thumb-inactive-opacity);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.thumb-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.thumb-num {
+  position: absolute;
+  bottom: 2px;
+  right: 4px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1px 4px;
+  border-radius: 3px;
+  backdrop-filter: blur(2px);
+}
+
+/* 호버 및 액티브 상태 */
+.thumb-item:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+  border-color: var(--border-color-opaque);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.thumb-item.active {
+  opacity: 1;
+  border-color: var(--color-orange);
+  border-width: 2px;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 64, 0, 0.15);
+}
+
+
+/* ==========================================================================
+   6. CSS View Transitions Animation (방향성 슬라이딩 구현)
+   ========================================================================== */
+
+/* 슬라이딩 키프레임 정의 */
+/* Slide to Left (다음 페이지 클릭 시 기존 화면이 왼쪽으로 이동) */
+@keyframes slide-to-left {
+  to { transform: translateX(-15%); opacity: 0; filter: blur(4px); }
+}
+/* Slide from Right (다음 페이지 클릭 시 새 화면이 오른쪽에서 들어옴) */
+@keyframes slide-from-right {
+  from { transform: translateX(15%); opacity: 0; filter: blur(4px); }
+}
+
+/* Slide to Right (이전 페이지 클릭 시 기존 화면이 오른쪽으로 이동) */
+@keyframes slide-to-right {
+  to { transform: translateX(15%); opacity: 0; filter: blur(4px); }
+}
+/* Slide from Left (이전 페이지 클릭 시 새 화면이 왼쪽에서 들어옴) */
+@keyframes slide-from-left {
+  from { transform: translateX(-15%); opacity: 0; filter: blur(4px); }
+}
+
+/* 트랜지션 타임라인 기본 설정 */
+::view-transition-group(slide-view) {
+  animation-duration: 0.4s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  animation-fill-mode: both;
+}
+
+/* Active transition type에 매핑 */
+/* FORWARD (다음 슬라이드로 진행) */
+html:active-view-transition-type(forward)::view-transition-old(slide-view) {
+  animation-name: slide-to-left;
+}
+html:active-view-transition-type(forward)::view-transition-new(slide-view) {
+  animation-name: slide-from-right;
+}
+
+/* BACKWARD (이전 슬라이드로 복귀) */
+html:active-view-transition-type(backward)::view-transition-old(slide-view) {
+  animation-name: slide-to-right;
+}
+html:active-view-transition-type(backward)::view-transition-new(slide-view) {
+  animation-name: slide-from-left;
+}
+
+/* 사용자가 동작 감소 모드를 설정했을 때 대응 */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(slide-view) {
+    animation: none !important;
+  }
+}
+
+
+/* ==========================================================================
+   7. 반응형 스타일 정의
+   ========================================================================== */
+@media (max-width: 768px) {
+  .slides-app {
+    padding: 16px;
+  }
+  
+  .nav-btn {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .nav-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .slides-main {
+    gap: 12px;
+  }
+  
+  .slide-viewport {
+    max-height: 50vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .slides-header {
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .header-right {
+    align-self: flex-end;
+  }
+  
+  .nav-btn {
+    /* 모바일에서는 버튼을 뷰포트 내에 절대 배치하여 공간 확보 */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .prev-btn {
+    left: 8px;
+  }
+  
+  .next-btn {
+    right: 8px;
+  }
+  
+  .thumb-item {
+    width: 64px;
+  }
+}

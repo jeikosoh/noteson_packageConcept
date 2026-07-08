@@ -1,0 +1,332 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', 'Pretendard', sans-serif;
+  background-color: #f5f5f5;
+  color: #111;
+  -webkit-font-smoothing: antialiased;
+}
+
+.admin-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 280px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 0;
+}
+
+.brand {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 0 32px;
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-badge {
+  background-color: #FF4000;
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: #888;
+  text-align: left;
+  padding: 16px 32px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.nav-btn:hover {
+  color: #fff;
+  background-color: rgba(255,255,255,0.05);
+}
+
+.nav-btn.active {
+  color: #FF4000;
+  background-color: rgba(255,64,0,0.1);
+  border-right: 3px solid #FF4000;
+}
+
+.sidebar-bottom {
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.save-btn {
+  background-color: #FF4000;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.save-btn:hover {
+  background-color: #e03800;
+}
+
+.view-site-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  opacity: 0.6;
+  text-align: center;
+}
+.view-site-link:hover {
+  opacity: 1;
+}
+
+
+/* CONTENT AREA */
+.content {
+  flex: 1;
+  padding: 48px;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+.header {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 24px;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: #666;
+  font-size: 14px;
+}
+
+.admin-section {
+  display: none;
+  max-width: 800px;
+}
+
+.admin-section.active {
+  display: block;
+}
+
+.admin-section h2 {
+  font-size: 20px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.admin-section h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #888;
+  margin: 32px 0 16px 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+/* FORMS */
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group-row {
+  display: flex;
+  gap: 24px;
+}
+.form-group-row .form-group {
+  flex: 1;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #FF4000;
+}
+
+.form-group small {
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.recipe-card {
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+.recipe-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.recipe-header h4 {
+  font-size: 16px;
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 12px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #888;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-btn.active {
+  color: #FF4000;
+  border-bottom-color: #FF4000;
+}
+
+.card-editor {
+  background-color: #fafafa;
+  border: 1px solid #eee;
+  padding: 24px;
+  border-radius: 8px;
+}
+
+/* CALENDAR EVENTS LIST */
+#cal-events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.cal-event-card {
+  display: flex;
+  align-items: center;
+  background-color: #fafafa;
+  border: 1px solid #eee;
+  padding: 16px;
+  border-radius: 8px;
+  gap: 16px;
+}
+.cal-event-thumb {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  background-color: #ddd;
+}
+.cal-event-info {
+  flex: 1;
+}
+.cal-event-info h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.cal-event-info p {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 2px;
+}
+.cal-event-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cal-btn {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.cal-btn:hover {
+  background-color: #eee;
+}
+.cal-btn.delete {
+  color: #d32f2f;
+  border-color: #ffcdd2;
+}
+.cal-btn.delete:hover {
+  background-color: #ffebee;
+}
+

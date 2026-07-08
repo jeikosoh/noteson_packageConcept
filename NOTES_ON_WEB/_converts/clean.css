@@ -1,0 +1,75 @@
+.noteson-landing-1 { display: flex; flex-direction: column; gap: 12px; padding: 24px 24px 24px 24px; align-items: center; background-color: #fcf5e5; }
+.header-2 { display: flex; flex-direction: row; gap: 16px; align-items: center; }
+.logo-3 { display: flex; flex-direction: row; align-items: center; }
+.divider-4 { position: absolute; left: 270px; top: 0px; width: 2px; height: 72px; background-color: #ff4000; }
+.nav-5 { display: flex; flex-direction: row; gap: 10px; align-items: center; border-radius: 12px; }
+.ul-6 { display: flex; flex-direction: row; gap: 2px; align-items: center; }
+.home-7 { display: flex; flex-direction: row; gap: 10px; padding: 0px 24px 0px 24px; justify-content: center; align-items: center; background-color: #1a241b; border-radius: 48px; }
+.home-8 { position: absolute; left: 18px; top: 18px; width: 36px; height: 36px; }
+.icon-9 { position: absolute; left: 5px; top: 3px; width: 27px; height: 30px; border: 2.5px solid #fcf5e5; }
+.about-10 { display: flex; flex-direction: row; gap: 10px; padding: 0px 24px 0px 24px; justify-content: center; align-items: center; border-radius: 12px; border: 2px solid #1a241b; }
+.about-11 { position: absolute; left: 24px; top: 30px; width: 61px; background-color: #1a241b; font-size: 18px; font-weight: 500; text-align: left; }
+.store-12 { display: flex; flex-direction: row; gap: 10px; padding: 0px 24px 0px 24px; justify-content: center; align-items: center; background-color: #ff4000; border-radius: 12px; border: 2px solid #ff4000; }
+.store-13 { position: absolute; left: 24px; top: 30px; width: 57px; background-color: #fcf5e5; font-size: 18px; font-weight: 500; text-align: left; }
+.announcement-14 { display: flex; flex-direction: row; gap: 10px; padding: 0px 48px 0px 48px; justify-content: center; align-items: center; border-radius: 48px; border: 2px solid #000000; }
+.announcements-15 { position: absolute; left: 131px; top: 30px; width: 279px; background-color: #000000; font-size: 18px; font-weight: 500; text-align: left; }
+.playground-16 { display: flex; flex-direction: row; gap: 10px; padding: 0px 24px 0px 24px; justify-content: center; align-items: center; background-color: #374038; border-radius: 12px; border: 2px solid #374038; }
+.playground-17 { position: absolute; left: 24px; top: 30px; width: 119px; background-color: #fcf5e5; font-size: 18px; font-weight: 500; text-align: left; }
+.divider-18 { position: absolute; left: 1305px; top: 0px; width: 2px; height: 72px; background-color: #ff4000; }
+.account-19 { display: flex; flex-direction: row; gap: 24px; justify-content: flex-end; align-items: center; }
+.account-20 { display: flex; flex-direction: row; gap: 10px; padding: 0px 24px 0px 24px; justify-content: center; align-items: center; border-radius: 48px; border: 2px solid #1a241b; }
+.icon-21 { position: absolute; left: 6px; top: 5px; width: 24px; height: 27px; border: 3.5px solid #1a241b; }
+.main-22 { position: absolute; left: 24px; top: 108px; width: 1392px; height: 824px; background-color: #ffffff; border-radius: 16px; border: 1px solid #000000; }
+.left-panel-23 { display: flex; flex-direction: column; gap: 24px; justify-content: space-between; }
+.today-s-tea-24 { display: flex; flex-direction: column; gap: 16px; padding: 24px 24px 24px 24px; border-radius: 16px; }
+.tea-info-row-25 { display: flex; flex-direction: row; gap: 36px; align-items: center; }
+.tea-title-block-26 { display: flex; flex-direction: column; gap: 16px; justify-content: center; }
+.tea-title-27 { position: absolute; left: 0px; top: 0px; width: 226px; background-color: #fcf5e5; font-size: 36px; font-weight: 800; text-align: right; }
+.tea-description-28 { position: absolute; left: 0px; top: 41px; width: 219px; background-color: #aaaaaa; font-size: 12px; font-weight: 400; text-align: left; }
+.brew-specs-29 { display: flex; flex-direction: column; gap: 12px; }
+.hot-brew-row-30 { display: flex; flex-direction: row; gap: 12px; align-items: center; }
+.hot-31 { display: flex; flex-direction: row; gap: 10px; padding: 4px 8px 4px 8px; background-color: #a82a00; border-radius: 12px; }
+.hot-brew-label-32 { position: absolute; left: 8px; top: 4px; width: 25px; background-color: #ffffff; font-size: 12px; font-weight: 500; text-align: left; }
+.hot-brew-details-33 { display: flex; flex-direction: row; gap: 8px; }
+.spec-volume-34 { display: flex; flex-direction: row; gap: 4px; align-items: center; }
+.icon-cup-35 { position: absolute; left: 0px; top: 0px; width: 13px; height: 13px; }
+.vector-6-36 { position: absolute; left: 1px; top: 5px; width: 12px; height: 8px; background-color: #ff4000; }
+.vector-2-37 { position: absolute; left: 0px; top: 0px; width: 13px; height: 13px; border: 1px solid #fcf5e5; }
+.vector-3-38 { position: absolute; left: 0px; top: 0px; width: 5px; height: 0px; border: 1px solid #fcf5e5; }
+.hot-brew-volume-39 { position: absolute; left: 17px; top: 2px; width: 42px; background-color: #fcf5e5; font-size: 14px; font-weight: 500; text-align: left; }
+.thermometer-40 { position: absolute; left: 0px; top: 0px; width: 14px; height: 14px; }
+.icon-41 { position: absolute; left: 4px; top: 1px; width: 5px; height: 13px; border: 1px solid #fcf5e5; }
+.icon-thermometer-42 { position: absolute; left: 9px; top: 13px; width: 4px; height: 9px; }
+.thermo-tube-43 { position: absolute; left: 1px; top: 0px; width: 1px; height: 8px; background-color: #ff4000; }
+.thermo-bulb-44 { position: absolute; left: 0px; top: 0px; width: 4px; height: 4px; background-color: #ff4000; }
+.hot-brew-temperature-45 { position: absolute; left: 16px; top: 2px; width: 34px; background-color: #fcf5e5; font-size: 14px; font-weight: 500; text-align: left; }
+.icon-46 { position: absolute; left: 1px; top: 1px; width: 12px; height: 12px; border: 1px solid #fcf5e5; }
+.vector-1-47 { position: absolute; left: 7px; top: 3px; width: 0px; height: 4px; border: 1px solid #ff4000; }
+.hot-brew-time-48 { position: absolute; left: 18px; top: 2px; width: 34px; background-color: #fcf5e5; font-size: 14px; font-weight: 500; text-align: left; }
+.cold-49 { display: flex; flex-direction: row; gap: 10px; padding: 4px 8px 4px 8px; background-color: #0079a8; border-radius: 12px; }
+.iced-brew-label-50 { position: absolute; left: 8px; top: 4px; width: 27px; background-color: #ffffff; font-size: 12px; font-weight: 500; text-align: left; }
+.iced-brew-volume-51 { position: absolute; left: 17px; top: 2px; width: 76px; background-color: #fcf5e5; font-size: 14px; font-weight: 500; text-align: left; }
+.icon-thermometer-52 { position: absolute; left: 5px; top: 4px; width: 4px; height: 9px; }
+.thermo-tube-53 { position: absolute; left: 2px; top: 9px; width: 1px; height: 8px; background-color: #ff4000; }
+.thermo-bulb-54 { position: absolute; left: 4px; top: 9px; width: 4px; height: 4px; background-color: #ff4000; }
+.tea-subtitle-55 { position: absolute; left: 24px; top: 113px; width: 526px; background-color: #fcf5e5; font-size: 18px; font-weight: 500; text-align: left; }
+.tea-text-56 { position: absolute; left: 24px; top: 163px; width: 526px; background-color: #fcf5e5; font-size: 14px; font-weight: 400; text-align: left; }
+.calendar-57 { display: flex; flex-direction: column; gap: 24px; padding: 24px 24px 24px 24px; justify-content: flex-end; border-radius: 16px; }
+.calendar-grid-58 { display: flex; flex-direction: column; gap: 22px; }
+.calendar-header-59 { display: flex; flex-direction: row; gap: 10px; padding: 0px 0px 8px 0px; justify-content: center; align-items: center; }
+.day-columns-60 { display: flex; flex-direction: row; justify-content: center; align-items: center; }
+.col-sun-61 { display: flex; flex-direction: column; gap: 16px; }
+.day-label-62 { position: absolute; left: 0px; top: 0px; width: 8px; background-color: #fcf5e5; font-size: 12px; font-weight: 400; text-align: center; }
+.week-1-63 { position: absolute; left: 0px; top: 24px; width: 10px; height: 10px; border: 1px solid #fcf5e5; }
+.week-2-64 { position: absolute; left: 0px; top: 50px; width: 10px; height: 10px; border: 1px solid #fcf5e5; }
+.week-3-65 { position: absolute; left: 0px; top: 76px; width: 10px; height: 10px; border: 1px solid #fcf5e5; }
+.week-4-66 { position: absolute; left: 0px; top: 102px; width: 10px; height: 10px; border: 1px solid #fcf5e5; }
+.week-5-67 { position: absolute; left: 0px; top: 128px; width: 10px; height: 10px; border: 1px solid #fcf5e5; }
+.week-2-68 { position: absolute; left: 0px; top: 50px; width: 10px; height: 10px; background-color: #fcf5e5; border: 1px solid #fcf5e5; }
+.week-2-69 { position: absolute; left: 0px; top: 50px; width: 10px; height: 10px; border: 1px solid #ff4000; }
+.calendar-divider-70 { position: absolute; left: 0px; top: 198px; width: 432px; height: 1px; background-color: #fcf5e5; }
+.schedule-list-71 { display: flex; flex-direction: column; justify-content: center; }
+.event-row-72 { display: flex; flex-direction: row; gap: 12px; }
+.event-date-73 { position: absolute; left: 0px; top: 0px; width: 68px; font-size: 14px; font-weight: 500; text-align: left; }
+.event-description-74 { position: absolute; left: 80px; top: 0px; width: 392px; background-color: #fcf5e5; font-size: 14px; font-weight: 400; text-align: left; }
+.copyright-text-75 { position: absolute; left: 604px; top: 944px; width: 232px; background-color: #000000; font-size: 9px; font-weight: 500; text-align: left; }

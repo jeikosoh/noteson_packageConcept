@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:      #111110;
+    --surface: #1C1C1B;
+    --border:  #2E2D2B;
+    --orange:  #FF5C00;
+    --orange2: #FF7A30;
+    --text:    #F0EFE9;
+    --muted:   #6B6A65;
+    --success: #34C77B;
+    --error:   #FF4444;
+    --radius:  10px;
+  }
+
+  html {
+    width: 100%;
+    background: var(--bg);
+  }
+
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  /* ── Header ── */
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 16px 13px;
+    border-bottom: 1px solid var(--border);
+  }
+  .header-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--orange);
+    flex-shrink: 0;
+  }
+  .header-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--text);
+  }
+  .header-ver {
+    margin-left: auto;
+    font-size: 10px;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ── Tabs ── */
+  .tabs {
+    display: flex;
+    padding: 10px 12px 0;
+    gap: 4px;
+  }
+  .tab {
+    flex: 1;
+    padding: 7px 4px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+    background: none;
+    border: none;
+    border-radius: 7px 7px 0 0;
+    cursor: pointer;
+    color: var(--muted);
+    transition: color .15s, background .15s;
+    border-bottom: 2px solid transparent;
+  }
+  .tab.active {
+    color: var(--text);
+    border-bottom-color: var(--orange);
+  }
+  .tab:hover:not(.active) { color: var(--text); }
+
+  /* ── Panels ── */
+  .panel { display: none; padding: 12px 16px 16px; flex-direction: column; gap: 12px; width: 100%; }
+  .panel.active { display: flex; }
+
+  /* ── Field label ── */
+  .label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  /* ── Input ── */
+  .input-row { display: flex; gap: 6px; }
+  .input {
+    flex: 1;
+    height: 36px;
+    padding: 0 11px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--text);
+    font-family: 'Inter', monospace;
+    font-size: 12px;
+    transition: border-color .15s;
+    outline: none;
+  }
+  .input:focus { border-color: var(--orange); }
+  .input.ok   { border-color: var(--success); }
+  .input.fail { border-color: var(--error); }
+
+  /* ── Select ── */
+  .select {
+    width: 100%;
+    height: 36px;
+    padding: 0 30px 0 11px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='5'%3E%3Cpath d='M0 0l5 5 5-5z' fill='%236B6A65'/%3E%3C/svg%3E") no-repeat right 10px center;
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    transition: border-color .15s;
+  }
+  .select:focus { border-color: var(--orange); }
+
+  /* ── Buttons ── */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    height: 36px;
+    padding: 0 14px;
+    border-radius: 999px;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity .15s, transform .1s;
+    white-space: nowrap;
+  }
+  .btn:hover { opacity: .85; }
+  .btn:active { transform: scale(.97); }
+  .btn:disabled { opacity: .35; cursor: not-allowed; transform: none !important; }
+
+  .btn-sm { height: 30px; font-size: 10px; padding: 0 11px; }
+  .btn-full { width: 100%; border-radius: var(--radius); }
+
+  .btn-orange { background: var(--orange); color: #fff; }
+  .btn-dark   { background: var(--surface); color: var(--text); border: 1px solid var(--border); }
+
+  /* ── Status pill ── */
+  .status-pill {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 11px;
+    border-radius: var(--radius);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    font-size: 11px;
+    color: var(--muted);
+    transition: border-color .2s, color .2s;
+  }
+  .status-pill.ok   { border-color: rgba(52,199,123,.35); color: var(--success); }
+  .status-pill.fail { border-color: rgba(255,68,68,.35);  color: var(--error); }
+  .status-pill.busy { border-color: rgba(255,92,0,.35);   color: var(--orange2); }
+
+  .pill-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    flex-shrink: 0;
+  }
+  .pill-dot.spin { animation: blink .9s ease-in-out infinite; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+  /* ── Upload zone ── */
+  .drop-zone {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 22px 16px;
+    border: 1.5px dashed var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    cursor: pointer;
+    transition: border-color .15s, background .15s;
+    text-align: center;
+    user-select: none;
+  }
+  .drop-zone:hover, .drop-zone.over { border-color: var(--orange); background: #1F1916; }
+  .drop-zone.has-file { border-style: solid; border-color: var(--success); background: #121A16; }
+  .drop-zone input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+  .drop-icon { font-size: 20px; }
+  .drop-main { font-size: 12px; font-weight: 600; color: var(--text); }
+  .drop-sub  { font-size: 10px; color: var(--muted); }
+  .drop-file { font-size: 10px; color: var(--success); margin-top: 2px; }
+
+  /* ── Progress ── */
+  .progress { display: none; flex-direction: column; gap: 5px; }
+  .progress.show { display: flex; }
+  .prog-track {
+    height: 3px;
+    background: var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .prog-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--orange), var(--orange2));
+    border-radius: 2px;
+    width: 0%;
+    transition: width .3s ease;
+  }
+  .prog-label { font-size: 10px; color: var(--muted); }
+
+  /* ── Log ── */
+  .log {
+    padding: 9px 11px;
+    border-radius: var(--radius);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    font-size: 10px;
+    font-family: monospace;
+    color: var(--muted);
+    line-height: 1.7;
+    word-break: break-word;
+    transition: border-color .2s, color .2s;
+  }
+  .log.ok   { color: var(--success); border-color: rgba(52,199,123,.3); }
+  .log.fail { color: var(--error);   border-color: rgba(255,68,68,.3); }
+  .log.busy { color: var(--orange2); border-color: rgba(255,92,0,.3); }
+
+  /* ── Divider ── */
+  .divider {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 10px; font-weight: 600; color: var(--muted);
+    letter-spacing: .08em; text-transform: uppercase;
+  }
+  .divider::before, .divider::after {
+    content: ''; flex: 1; height: 1px; background: var(--border);
+  }
+
+  /* ── Export row ── */
+  .export-row { display: flex; gap: 6px; }
+
+  /* ── Separator ── */
+  .sep { height: 1px; background: var(--border); }
+
+  /* ── Preview ── */
+  .preview-wrap {
+    display: none;
+    flex-direction: column;
+    gap: 7px;
+  }
+  .preview-wrap.show { display: flex; }
+  .preview-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .preview-badge {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--success);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+  }
+  .preview-badge-dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--success);
+  }
+  .preview-url {
+    font-size: 10px;
+    color: var(--muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+  }
+  .preview-box {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--surface);
+  }
+  .preview-skeleton {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: var(--muted);
+    font-size: 11px;
+    background: var(--surface);
+    z-index: 2;
+    transition: opacity .3s;
+  }
+  .preview-skeleton.hide { opacity: 0; pointer-events: none; }
+  .preview-spinner {
+    width: 18px; height: 18px;
+    border: 2px solid var(--border);
+    border-top-color: var(--orange);
+    border-radius: 50%;
+    animation: spin .7s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .preview-iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 1440px;
+    height: 900px;
+    border: none;
+    transform-origin: top left;
+    transform: scale(0.199);
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <div class="header-dot"></div>
+  <span class="header-title">Notes On NYC</span>
+  <span class="header-ver">v2.1</span>
+</div>
+
+<!-- Tabs -->
+<div class="tabs">
+  <button class="tab active" id="tab-in"  onclick="switchTab('in')">HTML → Figma</button>
+  <button class="tab"        id="tab-out" onclick="switchTab('out')">Figma → HTML</button>
+</div>
+
+<!-- ══ PANEL: HTML → Figma ══ -->
+<div class="panel active" id="panel-in">
+
+  <!-- 로컬 서버 -->
+  <div>
+    <div class="label">로컬 서버</div>
+    <div class="input-row">
+      <input class="input" id="url-in" type="text" value="http://localhost:3000" spellcheck="false">
+      <button class="btn btn-dark btn-sm" onclick="autoDetect()">Detect</button>
+    </div>
+    <div style="margin-top:7px;">
+      <div class="status-pill" id="detect-pill">
+        <div class="pill-dot" id="detect-dot"></div>
+        <span id="detect-text">서버 상태 미확인</span>
+      </div>
+    </div>
+    <!-- 미리보기 -->
+    <div class="preview-wrap" id="preview-wrap">
+      <div class="preview-header">
+        <div class="preview-badge">
+          <div class="preview-badge-dot"></div>
+          LIVE PREVIEW
+        </div>
+        <span class="preview-url" id="preview-url"></span>
+      </div>
+      <div class="preview-box">
+        <div class="preview-skeleton" id="preview-skeleton">
+          <div class="preview-spinner"></div>
+          <span>로딩 중...</span>
+        </div>
+        <iframe class="preview-iframe" id="preview-iframe"
+          sandbox="allow-scripts allow-same-origin"
+          scrolling="no"
+          onload="onPreviewLoad()"
+          onerror="onPreviewError()"
+        ></iframe>
+      </div>
+    </div>
+
+  </div><!-- end server section -->
+
+  <!-- HTML 업로드 -->
+  <div>
+    <div class="label">HTML 업로드</div>
+    <label class="drop-zone" id="drop-zone" for="file-in">
+      <input type="file" id="file-in" accept=".html" onchange="onFile(event)">
+      <div class="drop-icon">⌃</div>
+      <div class="drop-main">index.html 드래그 또는 클릭</div>
+      <div class="drop-file" id="drop-file"></div>
+    </label>
+  </div>
+
+  <!-- 배치 위치 -->
+  <div>
+    <div class="label">배치 위치</div>
+    <div style="display:flex; flex-direction:column; gap:6px;">
+      <select class="select" id="page-in" onchange="onPageChange(this.value)">
+        <option>페이지 로딩 중...</option>
+      </select>
+      <select class="select" id="frame-in">
+        <option value="new">✦ 새 프레임 생성</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Progress -->
+  <div class="progress" id="prog">
+    <div class="prog-track"><div class="prog-fill" id="prog-fill"></div></div>
+    <div class="prog-label" id="prog-label">준비 중...</div>
+  </div>
+
+  <!-- CTA -->
+  <button class="btn btn-orange btn-full" id="btn-in" onclick="runImport()">
+    Figma로 Import ↑
+  </button>
+
+  <div class="log" id="log-in">준비됨 — 서버를 감지하거나 파일을 업로드하세요.</div>
+
+</div>
+
+<!-- ══ PANEL: Figma → HTML ══ -->
+<div class="panel" id="panel-out">
+
+  <!-- 페이지 -->
+  <div>
+    <div class="label">페이지</div>
+    <select class="select" id="page-out" onchange="onPageChangeOut(this.value)">
+      <option>페이지 로딩 중...</option>
+    </select>
+  </div>
+
+  <!-- 캔버스 -->
+  <div>
+    <div class="label">캔버스 / 프레임</div>
+    <select class="select" id="canvas-out">
+      <option value="all">전체 페이지</option>
+    </select>
+  </div>
+
+  <div class="sep"></div>
+
+  <!-- Export 형식 -->
+  <div>
+    <div class="label">Export</div>
+    <div class="export-row">
+      <button class="btn btn-dark btn-sm" style="flex:1" onclick="runExport('json')">JSON 복사</button>
+      <button class="btn btn-dark btn-sm" style="flex:1" onclick="runExport('html')">HTML 보기</button>
+    </div>
+  </div>
+
+  <button class="btn btn-orange btn-full" id="btn-out" onclick="runExport('push')">
+    로컬에 반영 ↓
+  </button>
+
+  <div class="log" id="log-out">준비됨 — 내보낼 캔버스를 선택하세요.</div>
+
+</div>
+
+<script>
+  /* ── UI 준비 완료 신호 (code.js가 이걸 받은 후 init-data 전송) ── */
+  parent.postMessage({ pluginMessage: { type: 'ready' } }, '*');
+  /* ── 상태 ── */
+  let detectedUrl = null;
+  let uploadedHtml = null;
+
+  /* ── 탭 전환 ── */
+  function switchTab(id) {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('tab-' + id).classList.add('active');
+
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('panel-' + id).classList.add('active');
+    
+    setTimeout(resizeWindow, 10);
+  }
+
+  /* ── 플러그인 리사이즈 ── */
+  function resizeWindow() {
+    const h = document.body.scrollHeight;
+    parent.postMessage({ pluginMessage: { type: 'resize', width: 320, height: h } }, '*');
+  }
+
+  /* ── 초기화 ── */
+  window.onload = () => {
+    parent.postMessage({ pluginMessage: { type: 'ready' } }, '*');
+    setTimeout(resizeWindow, 50);
+  };
+
+  /* ── Figma → UI ── */
+  onmessage = (e) => {
+    const m = e.data.pluginMessage;
+    if (!m) return;
+    if (m.type === 'init-data') {
+      populatePages(m.pages, m.frames, m.currentPageId);
+    }
+    if (m.type === 'frames-updated') {
+      updateFrames(m.frames);
+    }
+    if (m.type === 'import-progress') {
+      showProg(m.step, m.total, m.label);
+    }
+    if (m.type === 'import-done') {
+      hideProg();
+      setLog('in', m.success ? 'ok' : 'fail', m.text);
+      document.getElementById('btn-in').disabled = false;
+    }
+    if (m.type === 'export-done') {
+      hideProg();
+      handleExportDone(m);
+    }
+    if (m.type === 'export-progress') {
+      showProg(m.step, m.total, m.label);
+    }
+    if (m.type === 'selection-changed') {
+      ['frame-in', 'canvas-out'].forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        let found = false;
+        for (let i = 0; i < el.options.length; i++) {
+          if (el.options[i].value === m.frameId) {
+            el.selectedIndex = i;
+            found = true;
+            break;
+          }
+        }
+        // 목록에 없는 하위 프레임을 선택한 경우 임시로 추가
+        if (!found) {
+          const opt = document.createElement('option');
+          opt.value = m.frameId;
+          opt.textContent = m.frameName;
+          opt.selected = true;
+          el.appendChild(opt);
+        }
+      });
+    }
+  };
+
+  /* ── 페이지 셀렉트 ── */
+  function populatePages(pages, frames, currentPageId) {
+    ['page-in','page-out'].forEach(id => {
+      const s = document.getElementById(id);
+      s.innerHTML = '';
+      pages.forEach(p => {
+        const o = document.createElement('option');
+        o.value = p.id; 
+        o.textContent = p.name;
+        if (p.id === currentPageId) o.selected = true;
+        s.appendChild(o);
+      });
+    });
+    updateFrames(frames);
+  }
+
+  function updateFrames(frames) {
+    const fi = document.getElementById('frame-in');
+    fi.innerHTML = '<option value="new">✦ 새 프레임 생성</option>';
+    frames.forEach(f => {
+      const o = document.createElement('option');
+      o.value = f.id; o.textContent = f.name;
+      fi.appendChild(o);
+    });
+
+    const co = document.getElementById('canvas-out');
+    co.innerHTML = '<option value="all">전체 페이지</option>';
+    frames.forEach(f => {
+      const o = document.createElement('option');
+      o.value = f.id; o.textContent = f.name;
+      co.appendChild(o);
+    });
+  }
+
+  function onPageChange(id)    { parent.postMessage({ pluginMessage: { type: 'change-page', pageId: id } }, '*'); }
+  function onPageChangeOut(id) { parent.postMessage({ pluginMessage: { type: 'change-page', pageId: id } }, '*'); }
+
+  /* ── Auto-Detect ── */
+  async function autoDetect() {
+    const url   = document.getElementById('url-in').value.trim();
+    const pill  = document.getElementById('detect-pill');
+    const dot   = document.getElementById('detect-dot');
+    const txt   = document.getElementById('detect-text');
+    const input = document.getElementById('url-in');
+
+    // 미리보기 초기화
+    hidePreview();
+
+    pill.className = 'status-pill busy';
+    dot.className  = 'pill-dot spin';
+    txt.textContent = `${url} 확인 중...`;
+    input.className = 'input';
+
+    try {
+      await fetch(url, { mode: 'no-cors', signal: AbortSignal.timeout(4000) });
+      // 성공
+      pill.className  = 'status-pill ok';
+      dot.className   = 'pill-dot';
+      txt.textContent = `연결됨 — ${url}`;
+      input.className = 'input ok';
+      detectedUrl     = url;
+      setLog('in', 'ok', `서버 감지 완료: ${url}\nImport 버튼을 눌러 가져오세요.`);
+      showPreview(url);
+    } catch {
+      pill.className  = 'status-pill fail';
+      dot.className   = 'pill-dot';
+      txt.textContent = `연결 실패 — HTML 파일을 업로드하세요`;
+      input.className = 'input fail';
+      detectedUrl     = null;
+      setLog('in', 'fail', `서버에 연결할 수 없음 (${url})\n→ 아래 Upload HTML을 사용하세요.`);
+    }
+  }
+
+  /* ── Preview ── */
+  function showPreview(url) {
+    const wrap    = document.getElementById('preview-wrap');
+    const iframe  = document.getElementById('preview-iframe');
+    const urlSpan = document.getElementById('preview-url');
+    const skeleton = document.getElementById('preview-skeleton');
+
+    urlSpan.textContent = url;
+    skeleton.classList.remove('hide');
+    wrap.classList.add('show');
+
+    // 스케일: preview-box 가로 286px / iframe 1440px ≈ 0.199
+    // preview-box 높이 120px
+    iframe.src = url;
+    setTimeout(resizeWindow, 10);
+  }
+
+  function hidePreview() {
+    document.getElementById('preview-wrap').classList.remove('show');
+    const iframe = document.getElementById('preview-iframe');
+    iframe.src = 'about:blank';
+    setTimeout(resizeWindow, 10);
+  }
+
+  function onPreviewLoad() {
+    document.getElementById('preview-skeleton').classList.add('hide');
+  }
+
+  function onPreviewError() {
+    const sk = document.getElementById('preview-skeleton');
+    sk.innerHTML = '<span style="color:var(--muted)">미리보기 불가 — CORS 정책</span>';
+  }
+
+  /* ── 파일 선택 ── */
+  function onFile(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    const r = new FileReader();
+    r.onload = (ev) => {
+      uploadedHtml = ev.target.result;
+      const zone = document.getElementById('drop-zone');
+      zone.classList.add('has-file');
+      document.getElementById('drop-file').textContent = '✓ ' + file.name;
+      setLog('in', 'ok', `${file.name} 로드 완료 (${(file.size/1024).toFixed(1)} KB)\nImport 버튼을 누르세요.`);
+    };
+    r.readAsText(file);
+  }
+
+  /* ── Import 실행 ── */
+  function runImport() {
+    if (!uploadedHtml && !detectedUrl) {
+      setLog('in', 'fail', '서버를 감지하거나 HTML 파일을 업로드하세요.');
+      return;
+    }
+    const pageId        = document.getElementById('page-in').value;
+    const targetFrameId = document.getElementById('frame-in').value;
+    document.getElementById('btn-in').disabled = true;
+    setLog('in', 'busy', '렌더링 준비 중...');
+    showProg(0, 100, '시작...');
+
+    if (uploadedHtml) {
+      // 파일 업로드시: 베이스 URL 없이 파싱
+      renderAndExtract(uploadedHtml, null, pageId, targetFrameId);
+    } else {
+      fetch(detectedUrl)
+        .then(r => r.text())
+        .then(html => renderAndExtract(html, detectedUrl, pageId, targetFrameId))
+        .catch(err => {
+          setLog('in', 'fail', `Fetch 실패: ${err.message}`);
+          document.getElementById('btn-in').disabled = false;
+          hideProg();
+        });
+    }
+  }
+
+  /* ── 정밀 렌더링 & 스타일 추출 ──
+     단계:
+       1. HTML 파싱 + CSS 인라인
+       2. 숨곫 iframe(1440px)에 주입 → 실제 렌더링
+       3. getComputedStyle + getBoundingClientRect로 스타일 트리 추출
+       4. code.js로 전송 
+  ── */
+  async function renderAndExtract(html, baseUrl, pageId, targetFrameId) {
+    try {
+      showProg(10, 100, 'HTML 파싱 중...');
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+
+      // 1. base tag 주입 (상대 URL 해석용)
+      if (baseUrl) {
+        let base = doc.querySelector('base');
+        if (!base) { base = doc.createElement('base'); doc.head.prepend(base); }
+        base.href = baseUrl + (baseUrl.endsWith('/') ? '' : '/');
+      }
+
+      // 2. CSS 링크 태그를 fetch하여 <style>로 인라인
+      showProg(20, 100, 'CSS 로드 중...');
+      if (baseUrl) {
+        const links = [...doc.querySelectorAll('link[rel="stylesheet"]')];
+        for (const link of links) {
+          try {
+            const href = new URL(link.getAttribute('href'), baseUrl + '/').toString();
+            const css  = await fetch(href).then(r => r.text());
+            const st   = doc.createElement('style');
+            st.textContent = css;
+            link.replaceWith(st);
+          } catch(e) { /* 실패시 원본 link 유지 */ }
+        }
+      }
+
+      showProg(30, 100, '브라우저 렌더링 중...');
+
+      // 3. 숨곫 iframe 생성 (1440px 디자인 기준)
+      const iframe = document.createElement('iframe');
+      iframe.style.cssText = [
+        'position:fixed', 'left:-19999px', 'top:0',
+        'width:1440px', 'height:900px',
+        'border:none', 'visibility:hidden', 'z-index:-1'
+      ].join(';');
+      document.body.appendChild(iframe);
+
+      const htmlStr = '<!DOCTYPE html>' + doc.documentElement.outerHTML;
+
+      await new Promise((resolve, reject) => {
+        const timer = setTimeout(() => {
+          reject(new Error('렌더링 타임아웃 (10s)'));
+        }, 10000);
+
+        iframe.onload = () => {
+          clearTimeout(timer);
+          // 렌이아웃 안정화 대기
+          setTimeout(resolve, 500);
+        };
+        iframe.srcdoc = htmlStr;
+      });
+
+      showProg(55, 100, '스타일 트리 추출 중...');
+      const tree = extractVisualTree(
+        iframe.contentDocument,
+        iframe.contentWindow
+      );
+      document.body.removeChild(iframe);
+
+      showProg(75, 100, 'Figma로 전송 중...');
+      parent.postMessage({
+        pluginMessage: {
+          type: 'push-tree',
+          tree,
+          pageId,
+          targetFrameId
+        }
+      }, '*');
+
+    } catch(err) {
+      setLog('in', 'fail', '오류: ' + err.message);
+      document.getElementById('btn-in').disabled = false;
+      hideProg();
+    }
+  }
+
+  /* ── 시각 트리 추출 (iframe DOM 기반) ── */
+  function extractVisualTree(doc, win) {
+    const SKIP = new Set(['SCRIPT','STYLE','META','LINK','HEAD',
+                          'BR','HR','NOSCRIPT','CANVAS']);
+
+    /* CSS rgb() 파싱 → {r,g,b,a} */
+    function parseColor(css) {
+      if (!css || css === 'transparent') return null;
+      const m = css.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)/);
+      if (!m) return null;
+      const a = m[4] !== undefined ? parseFloat(m[4]) : 1;
+      if (a < 0.01) return null;
+      return { r: +m[1]/255, g: +m[2]/255, b: +m[3]/255, a };
+    }
+
+    function px(v) { const n = parseFloat(v); return isNaN(n) ? 0 : n; }
+
+    function buildNodeData(node, depth) {
+      if (depth > 20) return null;
+      if (!node) return null;
+
+      // 텍스트 노드 추출 (Range 이용 정밀 측정)
+      if (node.nodeType === Node.TEXT_NODE) {
+        const text = node.textContent.trim();
+        if (!text) return null;
+
+        const range = doc.createRange();
+        range.selectNodeContents(node);
+        const rect = range.getBoundingClientRect();
+        if (rect.width < 1 || rect.height < 1) return null;
+
+        const parentEl = node.parentElement;
+        if (!parentEl) return null;
+        const st = win.getComputedStyle(parentEl);
+        if (st.display === 'none' || st.visibility === 'hidden' || parseFloat(st.opacity) < 0.01) return null;
+
+        const family = (st.fontFamily.split(',')[0]).replace(/["']/g,'').trim();
+        const weight = parseInt(st.fontWeight) || 400;
+
+        return {
+          type: 'TEXT',
+          text: text,
+          x: Math.round(rect.left),
+          y: Math.round(rect.top),
+          w: Math.round(rect.width),
+          h: Math.round(rect.height),
+          fontSize: Math.round(px(st.fontSize)),
+          fontWeight: weight,
+          fontFamily: family,
+          lineHeight: st.lineHeight === 'normal' ? null : Math.round(px(st.lineHeight)),
+          letterSpacing: px(st.letterSpacing),
+          textAlign: st.textAlign,
+          color: parseColor(st.color)
+        };
+      }
+
+      // 요소 노드 추출
+      if (node.nodeType === Node.ELEMENT_NODE) {
+        const el = node;
+        const tag = el.tagName.toUpperCase();
+        if (SKIP.has(tag)) return null;
+
+        const rect = el.getBoundingClientRect();
+        if (rect.width < 0.5 || rect.height < 0.5) return null;
+
+        const st = win.getComputedStyle(el);
+        if (st.display === 'none' || st.visibility === 'hidden' || parseFloat(st.opacity) < 0.01) return null;
+
+        // SVG는 원본 마크업 전체를 추출
+        if (tag === 'SVG') {
+          return {
+            type: 'SVG',
+            svg: el.outerHTML,
+            x: Math.round(rect.left),
+            y: Math.round(rect.top),
+            w: Math.round(rect.width),
+            h: Math.round(rect.height)
+          };
+        }
+
+        const bg = parseColor(st.backgroundColor);
+        const bStyle = st.borderTopStyle;
+        const bColor = bStyle !== 'none' ? parseColor(st.borderTopColor) : null;
+        const bW = px(st.borderTopWidth);
+
+        const frameNode = {
+          type: 'FRAME',
+          tag: tag,
+          x: Math.round(rect.left),
+          y: Math.round(rect.top),
+          w: Math.round(rect.width),
+          h: Math.round(rect.height),
+          bg: bg,
+          borderColor: bW > 0 ? bColor : null,
+          borderWidth: Math.round(bW),
+          borderRadius: Math.round(px(st.borderTopLeftRadius)),
+          opacity: parseFloat(st.opacity),
+          children: []
+        };
+
+        for (const child of el.childNodes) {
+          const c = buildNodeData(child, depth + 1);
+          if (c) frameNode.children.push(c);
+        }
+
+        if (frameNode.children.length === 0 && !bg && !bColor) return null;
+
+        return frameNode;
+      }
+
+      return null;
+    }
+
+    return buildNodeData(doc.body, 0);
+  }
+
+  /* ── Export 실행 ── */
+  function runExport(fmt) {
+    const pageId  = document.getElementById('page-out').value;
+    const frameId = document.getElementById('canvas-out').value;
+    showProg(0, 100, '데이터 수집 중...');
+    parent.postMessage({ pluginMessage: { type: 'pull-figma', pageId, frameId, format: fmt } }, '*');
+  }
+
+  function handleExportDone(m) {
+    if (m.text && m.text.startsWith('✗')) {
+      setLog('out', 'fail', m.text);
+      return;
+    }
+
+    if (m.format === 'json') {
+      const jsonData = JSON.stringify(m.data, null, 2);
+      
+      // JSON 다운로드
+      const jsonBlob = new Blob([jsonData], { type: 'application/json' });
+      const jsonUrl = URL.createObjectURL(jsonBlob);
+      const jsonA = document.createElement('a');
+      jsonA.href = jsonUrl;
+      jsonA.download = (m.filename || 'figma_design') + '_data.json';
+      document.body.appendChild(jsonA);
+      jsonA.click();
+      document.body.removeChild(jsonA);
+
+      // 스크린샷 버튼 생성 (다중 파일 다운로드 브라우저 차단 우회)
+      if (m.imageBytes && m.imageBytes.length > 0) {
+        const pngBlob = new Blob([m.imageBytes], { type: 'image/png' });
+        const pngUrl = URL.createObjectURL(pngBlob);
+        
+        const logPanel = document.getElementById('log-out');
+        logPanel.className = 'log ok';
+        logPanel.style.height = 'auto';
+        logPanel.innerHTML = `✓ JSON 완료!<br><br><a href="${pngUrl}" download="${m.filename}_preview.png" style="display:inline-block; padding:10px 14px; background:#eb3a00; color:#fff; text-decoration:none; border-radius:6px; font-weight:bold; width:100%; text-align:center;">🖼 스크린샷 수동 다운로드 클릭</a>`;
+      } else {
+        setLog('out', 'ok', '✓ JSON 완료! (단, 스크린샷 캡처는 실패함)');
+      }
+    } else if (m.format === 'push') {
+      pushToServer(m.data);
+    } else {
+      setLog('out', 'ok', m.text || '완료');
+    }
+  }
+
+  function fallbackCopy(text) {
+    // 이제 다운로드 방식을 사용하므로 제거해도 무방하지만 안전을 위해 껍데기만 남김
+  }
+
+  async function pushToServer(data) {
+    const url = document.getElementById('url-in').value.trim();
+    try {
+      const r = await fetch(url + '/figma-sync', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      setLog('out', r.ok ? 'ok' : 'fail', r.ok ? `✓ ${url} 반영 완료` : `서버 오류 ${r.status}`);
+    } catch {
+      navigator.clipboard.writeText(JSON.stringify(data, null, 2))
+        .then(() => setLog('out', 'ok', '서버 없음 — 데이터를 클립보드에 복사했습니다.'));
+    }
+  }
+
+  /* ── 유틸 ── */
+  function setLog(panel, type, text) {
+    const el = document.getElementById('log-' + panel);
+    el.className = 'log ' + (type === 'ok' ? 'ok' : type === 'fail' ? 'fail' : 'busy');
+    el.textContent = text;
+  }
+  function showProg(val, max, label) {
+    document.getElementById('prog').classList.add('show');
+    document.getElementById('prog-fill').style.width = (val/max*100) + '%';
+    document.getElementById('prog-label').textContent = label;
+    setTimeout(resizeWindow, 10);
+  }
+  function hideProg() { 
+    document.getElementById('prog').classList.remove('show'); 
+    setTimeout(resizeWindow, 10);
+  }
+
+  /* ── 드래그 & 드롭 ── */
+  const dz = document.getElementById('drop-zone');
+  dz.addEventListener('dragover',  e => { e.preventDefault(); dz.classList.add('over'); });
+  dz.addEventListener('dragleave', () => dz.classList.remove('over'));
+  dz.addEventListener('drop', e => {
+    e.preventDefault(); dz.classList.remove('over');
+    const f = e.dataTransfer.files[0];
+    if (f?.name.endsWith('.html')) onFile({ target: { files: [f] } });
+  });
+</script>
+</body>
+</html>

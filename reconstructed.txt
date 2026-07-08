@@ -1,0 +1,279 @@
+1: <!DOCTYPE html>
+2: <html lang="en">
+3: <head>
+4:   <meta charset="UTF-8">
+5:   <title>NOTES ON NYC</title>
+6:   <link rel="stylesheet" href="index.css">
+7:   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+8: </head>
+9: <body>
+10:   <!-- 커서 잉크 이펙트 (Gooey Filter) -->
+11:   <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+12:     <defs>
+13:       <filter id="goo">
+14:         <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+15:         <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 25 -10" result="goo" />
+16:         <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+17:       </filter>
+18:     </defs>
+19:   </svg>
+20: 
+21:   <!-- 커서 래퍼 (물리 엔진 적용됨) -->
+22:   <div id="cursor-container">
+23:     <div id="cursor-dot"></div>
+24:     <div id="cursor-ripple-container"></div>
+25:   </div>
+26: 
+27:   <!-- Connection Lines SVG -->
+28:   <svg id="connection-lines" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 1;">
+29:     <line id="line-tl"  stroke-width="0.4" />
+30:     <line id="line-tr"  stroke-width="0.4" />
+31:     <line id="line-bl"  stroke-width="0.4" />
+32:     <line id="line-br"  stroke-width="0.4" />
+33:     <!-- Product Card Lines -->
+34:     <line id="prod-line-tl"  stroke-width="0.4" />
+35:     <line id="prod-line-tr"  stroke-width="0.4" />
+36:     <line id="prod-line-bl"  stroke-width="0.4" />
+37:     <line id="prod-line-br"  stroke-width="0.4" />
+38:     <!-- Landscape Product Card Lines -->
+39:     <line id="land-line-tl"  stroke-width="0.4" />
+40:     <line id="land-line-tr"  stroke-width="0.4" />
+41:     <line id="land-line-bl"  stroke-width="0.4" />
+42:     <line id="land-line-br"  stroke-width="0.4" />
+43:   </svg>
+44:   <!-- 텍스트는 필터에 왜곡되지 않게 컨테이너 외부에 둠 -->
+45:   <div id="cursor-coords">
+46:     <div class="coord-line">x:<span id="coord-x">0</span>|y:<span id="coord-y">0</span></div>
+47:     <div class="speed-line">
+48:       <span>SP:<span id="speed-num">0</span>px/s</span>
+49:     </div>
+50:   </div>
+51: 
+52:   <div class="noteson-landing">
+53:     <!-- HEADER -->
+54:     <header class="header">
+55:       <div class="logo">
+56:         <img src="NOTES_ON_WEB/_ASSETS/LOGO.png?v=2" alt="non. logo" class="logo-img">
+405:        SPA ROUTING LOGIC
+406:        ========================================= */
+407:     document.addEventListener('DOMContentLoaded', () => {
+408:       // Mock Authentication State
+409:       window.isLoggedIn = false;
+410: 
+411:       const homeBtn = document.querySelector('.home-btn');
+412:       const aboutBtn = document.querySelector('.about-btn');
+413:       const loginBtn = document.querySelector('.login-action-btn');
+414:       const signupBtn = document.querySelector('.signup-action-btn');
+415:       const accountBtn = document.getElementById('account-btn');
+416:       
+417:       const viewHome = document.getElementById('view-home');
+418:       const viewAbout = document.getElementById('view-about');
+419:       const viewLogin = document.getElementById('view-login');
+420:       const viewSignup = document.getElementById('view-signup');
+421:       const viewProfile = document.getElementById('view-profile');
+422: 
+423:       function switchView(viewName) {
+424:         // Remove active class from all nav items and account btn
+425:         document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+426:         if (accountBtn) accountBtn.classList.remove('active');
+427:         
+428:         // Hide all views
+429:         document.querySelectorAll('.view-section').forEach(el => {
+430:           el.style.display = 'none';
+431:           el.classList.remove('active');
+432:         });
+433: 
+434:         if (viewName === 'home') {
+435:           homeBtn.classList.add('active');
+436:           viewHome.style.display = 'block';
+437:           viewHome.classList.add('active');
+438:         } else if (viewName === 'about') {
+439:           aboutBtn.classList.add('active');
+440:           viewAbout.style.display = 'block';
+441:           viewAbout.classList.add('active');
+442:         } else if (viewName === 'login') {
+443:           if (accountBtn) accountBtn.classList.add('active');
+444:           viewLogin.style.display = 'flex';
+445:           viewLogin.classList.add('active');
+446:         } else if (viewName === 'signup') {
+447:           if (accountBtn) accountBtn.classList.add('active');
+448:           viewSignup.style.display = 'flex';
+449:           viewSignup.classList.add('active');
+450:         } else if (viewName === 'profile') {
+1460:           prodOffsetY = e.clientY - rect.top;
+1461:           prodCard.style.transition = "none";
+1462:           
+1463:           const onMouseMove = (ev) => {
+1464:             if (!isDraggingProd) return;
+1465:             let newX = ev.clientX - prodOffsetX;
+1466:             let newY = ev.clientY - prodOffsetY;
+1467:             
+1468:             const mainRect = document.querySelector(".main").getBoundingClientRect();
+1469:             const leftPanel = document.querySelector(".left-panel");
+1470:             const leftPanelRect = leftPanel ? leftPanel.getBoundingClientRect() : { right: mainRect.left + 600 };
+1471:             const cardRect = prodCard.getBoundingClientRect();
+1472:             
+1473:             const minX = mainRect.left + 24;
+1474:             const maxX = mainRect.right - cardRect.width - 24;
+1475:             const minY = mainRect.top + 24;
+1476:             const maxY = mainRect.bottom - cardRect.height - 24;
+1477:             
+1478:             const actualMaxX = Math.max(minX, maxX);
+1479:             const actualMaxY = Math.max(minY, maxY);
+1480:             
+1481:             if (newX < minX) newX = minX;
+1482:             if (newY < minY) newY = minY;
+1483:             if (newX > actualMaxX) newX = actualMaxX;
+1484:             if (newY > actualMaxY) newY = actualMaxY;
+1485:             
+1486:             prodCard.style.left = newX + "px";
+1487:             prodCard.style.top = newY + "px";
+1488:             prodCard.style.right = "auto";
+1489:           };
+1490: 
+1491:           const onMouseUp = () => {
+1492:             isDraggingProd = false;
+1493:             prodCard.style.transition = "";
+1494:             document.removeEventListener("mousemove", onMouseMove);
+1495:             document.removeEventListener("mouseup", onMouseUp);
+1496:             const prefix = prodCard.dataset.linePrefix;
+1497:             document.body.classList.remove('is-interacting-' + prefix);
+1498:           };
+1499: 
+1500:           document.addEventListener("mousemove", onMouseMove);
+1501:           document.addEventListener("mouseup", onMouseUp);
+1502:         });
+1503: 
+1504:         const clampProdCard = () => {
+1505:           const mainRect = document.querySelector(".main").getBoundingClientRect();
+1506:           const leftPanel = document.querySelector(".left-panel");
+1507:           const leftPanelRect = leftPanel ? leftPanel.getBoundingClientRect() : { right: mainRect.left + 600 };
+1508:           const cardRect = prodCard.getBoundingClientRect();
+1509:           
+1510:           let newX = cardRect.left;
+1511:           let newY = cardRect.top;
+1512:           let adjusted = false;
+1513: 
+1514:           const minX = mainRect.left + 24;
+1515:           const maxX = mainRect.right - cardRect.width - 24;
+1516:           const minY = mainRect.top + 24;
+1517:           const maxY = mainRect.bottom - cardRect.height - 24;
+1518: 
+1519:           const actualMaxX = Math.max(minX, maxX);
+1520:           const actualMaxY = Math.max(minY, maxY);
+1521: 
+1522:           if (newX < minX) { newX = minX; adjusted = true; }
+1523:           if (newY < minY) { newY = minY; adjusted = true; }
+1524:           if (newX > actualMaxX) { newX = actualMaxX; adjusted = true; }
+1525:           if (newY > actualMaxY) { newY = actualMaxY; adjusted = true; }
+1526: 
+1527:           if (adjusted) {
+1528:             prodCard.style.left = newX + "px";
+1529:             prodCard.style.top = newY + "px";
+1530:             prodCard.style.right = "auto";
+1531:           }
+1532:         };
+1533:         const dynamicLabel = document.getElementById('dynamic-label');
+1534:         let dlAnimFrame;
+1535: 
+1536:         const updateDlPosition = () => {
+1537:           if (dynamicLabel && dynamicLabel.classList.contains('visible')) {
+1538:             const rect = prodCard.getBoundingClientRect();
+1539:             dynamicLabel.style.left = `${rect.right - 16}px`;
+1540:             // Align vertically with the center of the card or top. Let's align top with top of card.
+1541:             dynamicLabel.style.top = `${rect.top}px`;
+1542:             dlAnimFrame = requestAnimationFrame(updateDlPosition);
+1543:           }
+1544:         };
+1545:         
+1546:         if (typeof cursorContainer !== 'undefined' && typeof cursorCoords !== 'undefined') {
+1547:           prodCard.addEventListener('mouseenter', () => {
+1548:             cursorContainer.style.opacity = '0';
+1549:             cursorCoords.style.opacity = '0';
+1550:             if (prodCard.dataset.linePrefix === 'prod' && dynamicLabel) {
+1551:               dynamicLabel.classList.add('visible');
+1552:               updateDlPosition();
+1553:             }
+1554:           });
+1555:           prodCard.addEventListener('mouseleave', () => {
+1556:             cursorContainer.style.opacity = '1';
+1557:             cursorCoords.style.opacity = '1';
+1558:             if (prodCard.dataset.linePrefix === 'prod' && dynamicLabel) {
+1559:               dynamicLabel.classList.remove('visible');
+1560:               cancelAnimationFrame(dlAnimFrame);
+1561:             }
+1562:           });
+1563:         } else {
+1564:           prodCard.addEventListener('mouseenter', () => {
+1565:             if (prodCard.dataset.linePrefix === 'prod' && dynamicLabel) {
+1566:               dynamicLabel.classList.add('visible');
+1567:               updateDlPosition();
+1568:             }
+1569:           });
+1570:           prodCard.addEventListener('mouseleave', () => {
+1571:             if (prodCard.dataset.linePrefix === 'prod' && dynamicLabel) {
+1572:               dynamicLabel.classList.remove('visible');
+1573:               cancelAnimationFrame(dlAnimFrame);
+1574:             }
+1575:           });
+1576:         }
+1577: 
+1578:         window.addEventListener("resize", clampProdCard);
+1579:         const prodResizeObserver = new ResizeObserver(() => clampProdCard());
+1580:         prodResizeObserver.observe(prodCard);
+1680:           }
+1681:         });
+1682: 
+1683:         requestAnimationFrame(updateConnectionLines);
+1684:       }
+1685:       
+1686:       // Start the loop
+1687:       requestAnimationFrame(updateConnectionLines);
+1688: 
+1689:     });
+1690:   </script>
+1691:   
+1692:   <!-- MAIN PRODUCT CARD -->
+1693:   <div class="main-product-card" data-line-prefix="prod">
+1694:     <!-- Main Card Container -->
+1695:     <div class="mpc-container">
+1696:       
+1697:       <!-- Image (Native Aspect Ratio) -->
+1698:       <div class="mpc-image-wrapper">
+1699:         <div class="mpc-featured-badge">FEATURED</div>
+1700:         <img src="NOTES_ON_WEB/_converts/product_card_preview.png" alt="Seasonal Tea">
+1701:       </div>
+1702:       
+1703:       <!-- Divider -->
+1704:       <div class="mpc-divider"></div>
+1705: 
+1706:       <!-- Details -->
+1707:       <div class="mpc-info">
+1708:         <div class="mpc-left-group">
+1709:           <span class="mpc-label">&gt;&gt;&gt;</span>
+1710:           <span class="mpc-tea-name">Yame Sencha</span>
+1711:         </div>
+1712:         <span class="mpc-country">JAPAN</span>
+1713:       </div>
+1714:     </div>
+1715:   </div>
+1716: 
+1717:   <!-- LANDSCAPE PRODUCT CARD -->
+1718:   <div class="main-product-card landscape-card" data-line-prefix="land">
+1719:     <div class="mpc-container">
+1720:       <div class="mpc-image-wrapper">
+1721:         <div class="mpc-featured-badge">FEATURED</div>
+1722:         <img src="NOTES_ON_WEB/_ASSETS/temp_product_lands.avif" alt="Seasonal Tea">
+1723:       </div>
+1724:       <div class="mpc-divider"></div>
+1725:       <div class="mpc-info">
+1726:         <div class="mpc-left-group">
+1727:           <span class="mpc-label">&gt;&gt;&gt;</span>
+1728:           <span class="mpc-tea-name">Yame Sencha (Land)</span>
+1729:         </div>
+1730:         <span class="mpc-country">JAPAN</span>
+1731:     <div class="vid-player-drag-handle"></div> <!-- 드래그를 위한 핸들 영역 -->
+1732: 
+1733:     <!-- Main Video Container and Rectangle 11 Wrapper -->
+1734:     <div class="vid-rect11">
+1735:       <!-- Fixed distance marks & anchors -->

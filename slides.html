@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko" class="light-mode">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOTES ON - Slides Viewer</title>
+  <!-- Google Fonts & Pretendard -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;800&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  
+  <link rel="stylesheet" href="slides.css">
+</head>
+<body>
+  <div class="slides-app">
+    <!-- Header Section -->
+    <header class="slides-header">
+      <div class="header-left">
+        <a href="index.html" class="logo-link">
+          <span class="logo-text">NOTES ON</span>
+        </a>
+        <div class="header-divider"></div>
+        <span class="view-title">PACKAGE CONCEPT</span>
+      </div>
+      
+      <div class="header-right">
+        <!-- 테마 토글 버튼 (Light/Dark) -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="테마 전환">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <span class="theme-text">DARK MODE</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Slide Viewer Area -->
+    <main class="slides-main">
+      <!-- Navigation Button: Prev -->
+      <button id="btn-prev" class="nav-btn prev-btn" aria-label="이전 슬라이드">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+
+      <!-- Slide Viewport (Aspect Ratio Box) -->
+      <div class="slide-viewport">
+        <div id="slide-stage" class="slide-stage">
+          <img id="active-slide" src="03_CONTENTS/slides/slide1.png" alt="Slide 1" class="slide-image">
+        </div>
+      </div>
+
+      <!-- Navigation Button: Next -->
+      <button id="btn-next" class="nav-btn next-btn" aria-label="다음 슬라이드">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
+    </main>
+
+    <!-- Footer Controls -->
+    <footer class="slides-footer">
+      <!-- Progress Bar & Indicator -->
+      <div class="footer-meta">
+        <div class="slide-counter">
+          <span id="current-index-display">01</span>
+          <span class="counter-divider">/</span>
+          <span id="total-count-display">09</span>
+        </div>
+        <div class="progress-bar-container">
+          <div id="progress-bar-fill" class="progress-bar-fill" style="width: 11.11%;"></div>
+        </div>
+      </div>
+
+      <!-- Thumbnails Carousel -->
+      <div class="thumbnails-container">
+        <div class="thumbnails-track">
+          <!-- 썸네일들이 JS에 의해 채워지거나 정적으로 생성됩니다. 구조 유지를 위해 정적으로 배치합니다. -->
+          <button class="thumb-item active" data-index="0" aria-label="슬라이드 1로 이동">
+            <img src="03_CONTENTS/slides/slide1.png" alt="Thumbnail 1">
+            <span class="thumb-num">01</span>
+          </button>
+          <button class="thumb-item" data-index="1" aria-label="슬라이드 2로 이동">
+            <img src="03_CONTENTS/slides/slide2.png" alt="Thumbnail 2">
+            <span class="thumb-num">02</span>
+          </button>
+          <button class="thumb-item" data-index="2" aria-label="슬라이드 3로 이동">
+            <img src="03_CONTENTS/slides/slide3.png" alt="Thumbnail 3">
+            <span class="thumb-num">03</span>
+          </button>
+          <button class="thumb-item" data-index="3" aria-label="슬라이드 4로 이동">
+            <img src="03_CONTENTS/slides/slide4.png" alt="Thumbnail 4">
+            <span class="thumb-num">04</span>
+          </button>
+          <button class="thumb-item" data-index="4" aria-label="슬라이드 5로 이동">
+            <img src="03_CONTENTS/slides/slide5.png" alt="Thumbnail 5">
+            <span class="thumb-num">05</span>
+          </button>
+          <button class="thumb-item" data-index="5" aria-label="슬라이드 6로 이동">
+            <img src="03_CONTENTS/slides/slide6.png" alt="Thumbnail 6">
+            <span class="thumb-num">06</span>
+          </button>
+          <button class="thumb-item" data-index="6" aria-label="슬라이드 7로 이동">
+            <img src="03_CONTENTS/slides/slide7.png" alt="Thumbnail 7">
+            <span class="thumb-num">07</span>
+          </button>
+          <button class="thumb-item" data-index="7" aria-label="슬라이드 8로 이동">
+            <img src="03_CONTENTS/slides/slide8.png" alt="Thumbnail 8">
+            <span class="thumb-num">08</span>
+          </button>
+          <button class="thumb-item" data-index="8" aria-label="슬라이드 9로 이동">
+            <img src="03_CONTENTS/slides/slide9.png" alt="Thumbnail 9">
+            <span class="thumb-num">09</span>
+          </button>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="slides.js"></script>
+</body>
+</html>

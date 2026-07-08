@@ -1,0 +1,954 @@
+{
+  "texts": {
+    "featured_film": "FEATURED FILM >>>",
+    "art_film_title": "ART FILM TITLE",
+    "00_00_00": "00:00:00"
+  },
+  "colors": {
+    "union": "#000000",
+    "rectangle_11": "#d9d9d9",
+    "rectangle_12": "#d9d9d9",
+    "rectangle_15": "#000000",
+    "rectangle_16": "#000000",
+    "rectangle_17": "#000000",
+    "ellipse_6": "#000000",
+    "ellipse_10": "#ff4000",
+    "ellipse_8": "#000000",
+    "ellipse_11": "#000000",
+    "ellipse_9": "#000000",
+    "ellipse_12": "#000000",
+    "featured_film": "#000000",
+    "art_film_title": "#000000",
+    "frame_3": "#000000",
+    "00_00_00": "#ffffff"
+  },
+  "tree": {
+    "id": "673:1568",
+    "name": "VID_Player",
+    "type": "FRAME",
+    "x": 5882,
+    "y": 3746,
+    "width": 520,
+    "height": 310,
+    "rotation": 0,
+    "opacity": 1,
+    "blendMode": "PASS_THROUGH",
+    "isMask": false,
+    "isComponent": false,
+    "strokeWeight": 1,
+    "strokeAlign": "INSIDE",
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "layoutAlign": "INHERIT",
+    "layoutGrow": 0,
+    "clipsContent": true,
+    "layoutMode": "NONE",
+    "primaryAxisSizingMode": "AUTO",
+    "counterAxisSizingMode": "FIXED",
+    "primaryAxisAlignItems": "MIN",
+    "counterAxisAlignItems": "MIN",
+    "itemSpacing": 0,
+    "itemReverseZIndex": false,
+    "strokesIncludedInLayout": false,
+    "paddingLeft": 0,
+    "paddingRight": 0,
+    "paddingTop": 0,
+    "paddingBottom": 0,
+    "cornerRadius": 0,
+    "topLeftRadius": 0,
+    "topRightRadius": 0,
+    "bottomLeftRadius": 0,
+    "bottomRightRadius": 0,
+    "children": [
+      {
+        "id": "672:1536",
+        "name": "Rectangle 10",
+        "type": "RECTANGLE",
+        "x": 20,
+        "y": 20,
+        "width": 480,
+        "height": 270,
+        "rotation": 0,
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "isComponent": false,
+        "fills": [
+          {
+            "type": "IMAGE",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "scaleMode": "FILL",
+            "scalingFactor": 0.5,
+            "rotation": 0,
+            "filters": {
+              "exposure": 0,
+              "contrast": 0,
+              "saturation": 0,
+              "temperature": 0,
+              "tint": 0,
+              "highlights": 0,
+              "shadows": 0
+            },
+            "imageTransform": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ]
+            ],
+            "imageHash": "848023c358f030edd14e76462250021185e01cd6"
+          }
+        ],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "constraints": {
+          "horizontal": "MIN",
+          "vertical": "MIN"
+        },
+        "layoutAlign": "INHERIT",
+        "layoutGrow": 0
+      },
+      {
+        "id": "672:1544",
+        "name": "Rectangle 11",
+        "type": "RECTANGLE",
+        "x": 14,
+        "y": 14,
+        "width": 492,
+        "height": 282,
+        "rotation": 0,
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "isComponent": false,
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "constraints": {
+          "horizontal": "MIN",
+          "vertical": "MIN"
+        },
+        "layoutAlign": "INHERIT",
+        "layoutGrow": 0
+      },
+      {
+        "id": "672:1540",
+        "name": "Union",
+        "type": "BOOLEAN_OPERATION",
+        "x": 0,
+        "y": 0,
+        "width": 16,
+        "height": 16,
+        "rotation": 0,
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "isVectorAsset": true,
+        "isComponent": false,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 0,
+        "strokeAlign": "INSIDE",
+        "layoutAlign": "INHERIT",
+        "layoutGrow": 0,
+        "children": [
+          {
+            "id": "672:1538",
+            "name": "Rectangle 11",
+            "type": "RECTANGLE",
+            "x": 7.65234375,
+            "y": 0,
+            "width": 0.695652186870575,
+            "height": 16,
+            "rotation": 0,
+            "opacity": 1,
+            "blendMode": "PASS_THROUGH",
+            "isMask": false,
+            "isComponent": false,
+            "fills": [
+              {
+                "type": "SOLID",
+                "visible": true,
+                "opacity": 1,
+                "blendMode": "NORMAL",
+                "color": {
+                  "r": 0.8509804010391235,
+                  "g": 0.8509804010391235,
+                  "b": 0.8509804010391235
+                },
+                "boundVariables": {}
+              }
+            ],
+            "strokeWeight": 1,
+            "strokeAlign": "INSIDE",
+            "constraints": {
+              "horizontal": "MIN",
+              "vertical": "MIN"
+            },
+            "layoutAlign": "INHERIT",
+            "layoutGrow": 0
+          },
+          {
+            "id": "672:1539",
+            "name": "Rectangle 12",
+            "type": "RECTANGLE",
+            "x": 16,
+            "y": 7.65234375,
+            "width": 0.6956528425216675,
+            "height": 16,
+            "rotation": -90.00000250447808,
+            "opacity": 1,
+            "blendMode": "PASS_THROUGH",
+            "isMask": false,
+            "isComponent": false,
+            "fills": [
+              {
+                "type": "SOLID",
+                "visible": true,
+                "opacity": 1,
+                "blendMode": "NORMAL",
+                "color": {
+                  "r": 0.8509804010391235,
+                  "g": 0.8509804010391235,
+                  "b": 0.8509804010391235
+                },
+                "boundVariables": {}
+              }
+            ],
+            "strokeWeight": 1,
+            "strokeAlign": "INSIDE",
+            "constraints": {
+              "horizontal": "MIN",
+              "vertical": "MIN"
+            },
+            "layoutAlign": "INHERIT",
+            "layoutGrow": 0
+          }
+        ]
+      },
+      {
+        "id": "672:1541",
+        "name": "Union",
+        "type": "BOOLEAN_OPERATION",
+        "x": 504,
+        "y": 294,
+        "width": 16,
+        "height": 16,
+        "rotation": 0,
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "isVectorAsset": true,
+        "isComponent": false,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 0,
+        "strokeAlign": "INSIDE",
+        "layoutAlign": "INHERIT",
+        "layoutGrow": 0,
+        "children": [
+          {
+            "id": "672:1542",
+            "name": "Rectangle 11",
+            "type": "RECTANGLE",
+            "x": 511.65234375,
+            "y": 294,
+            "width": 0.695652186870575,
+            "height": 16,
+            "rotation": 0,
+            "opacity": 1,
+            "blendMode": "PASS_THROUGH",
+            "isMask": false,
+            "isComponent": false,
+            "fills": [
+              {
+                "type": "SOLID",
+                "visible": true,
+                "opacity": 1,
+                "blendMode": "NORMAL",
+                "color": {
+                  "r": 0.8509804010391235,
+                  "g": 0.8509804010391235,
+                  "b": 0.8509804010391235
+                },
+                "boundVariables": {}
+              }
+            ],
+            "strokeWeight": 1,
+            "strokeAlign": "INSIDE",
+            "constraints": {
+              "horizontal": "MIN",
+              "vertical": "MIN"
+            },
+            "layoutAlign": "INHERIT",
+            "layoutGrow": 0
+          },
+          {
+            "id": "672:1543",
+            "name": "Rectangle 12",
+            "type": "RECTANGLE",
+            "x": 520,
+            "y": 301.65234375,
+            "width": 0.6956528425216675,
+            "height": 16,
+            "rotation": -90.00000250447808,
+            "opacity": 1,
+            "blendMode": "PASS_THROUGH",
+            "isMask": false,
+            "isComponent": false,
+            "fills": [
+              {
+                "type": "SOLID",
+                "visible": true,
+                "opacity": 1,
+                "blendMode": "NORMAL",
+                "color": {
+                  "r": 0.8509804010391235,
+                  "g": 0.8509804010391235,
+                  "b": 0.8509804010391235
+                },
+                "boundVariables": {}
+              }
+            ],
+            "strokeWeight": 1,
+            "strokeAlign": "INSIDE",
+            "constraints": {
+              "horizontal": "MIN",
+              "vertical": "MIN"
+            },
+            "layoutAlign": "INHERIT",
+            "layoutGrow": 0
+          }
+        ]
+      },
+      {
+        "id": "672:1548",
+        "name": "Rectangle 15",
+        "type": "VECTOR",
+        "x": 506,
+        "y": 14,
+        "width": 7,
+        "height": 95,
+        "rotation": 0,
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "isVectorAsset": true,
+        "isComponent": false,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "constraints": {
+          "horizontal": "MIN",
+          "vertical": "MIN"
+        },
+        "layoutAlign": "INHERIT",
+        "layoutGrow": 0
+      },
+      {
+        "id": "672:1551",
+        "name": "Rectangle 16",
+        "type": "RECTANGLE",
+        "x": 490,
+        "y": 302,
+        "width": 2.0000054836273193,
+        "height": 128,
+        "rotation": -90.00000250447808,
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "isComponent": false,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "constraints": {
+          "horizontal": "MIN",
+          "vertical": "MIN"
+        },
+        "layoutAlign": "INHERIT",
+        "layoutGrow": 0
+      },
+      {
+        "id": "673:1567",
+        "name": "Rectangle 17",
+        "type": "RECTANGLE",
+        "x": 505,
+        "y": 7,
+        "width": 2.0000009536743164,
+        "height": 24,
+        "rotation": -90.00000250447808,
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "isComponent": false,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "constraints": {
+          "horizontal": "MIN",
+          "vertical": "MIN"
+        },
+        "layoutAlign": "INHERIT",
+        "layoutGrow": 0
+      },
+      {
+        "id": "672:1552",
+        "name": "Ellipse 6",
+        "type": "ELLIPSE",
+        "x": 507,
+        "y": 114,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "isComponent": false,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "constraints": {
+          "horizontal": "MIN",
+          "vertical": "MIN"
+        },
+        "layoutAlign": "INHERIT",
+        "layoutGrow": 0
+      },
+      {
+        "id": "673:1564",
+        "name": "Ellipse 10",
+        "type": "ELLIPSE",
+        "x": 507,
+        "y": 17,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "isComponent": false,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 0.250980406999588,
+              "b": 0
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "constraints": {
+          "horizontal": "MIN",
+          "vertical": "MIN"
+        },
+        "layoutAlign": "INHERIT",
+        "layoutGrow": 0
+      },
+      {
+        "id": "672:1554",
+        "name": "Ellipse 8",
+        "type": "ELLIPSE",
+        "x": 6,
+        "y": 6,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "isComponent": false,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "constraints": {
+          "horizontal": "MIN",
+          "vertical": "MIN"
+        },
+        "layoutAlign": "INHERIT",
+        "layoutGrow": 0
+      },
+      {
+        "id": "673:1565",
+        "name": "Ellipse 11",
+        "type": "ELLIPSE",
+        "x": 6,
+        "y": 301,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "isComponent": false,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "constraints": {
+          "horizontal": "MIN",
+          "vertical": "MIN"
+        },
+        "layoutAlign": "INHERIT",
+        "layoutGrow": 0
+      },
+      {
+        "id": "673:1563",
+        "name": "Ellipse 9",
+        "type": "ELLIPSE",
+        "x": 510,
+        "y": 300,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "isComponent": false,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "constraints": {
+          "horizontal": "MIN",
+          "vertical": "MIN"
+        },
+        "layoutAlign": "INHERIT",
+        "layoutGrow": 0
+      },
+      {
+        "id": "673:1566",
+        "name": "Ellipse 12",
+        "type": "ELLIPSE",
+        "x": 510,
+        "y": 6,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "isComponent": false,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "constraints": {
+          "horizontal": "MIN",
+          "vertical": "MIN"
+        },
+        "layoutAlign": "INHERIT",
+        "layoutGrow": 0
+      },
+      {
+        "id": "672:1553",
+        "name": "Ellipse 7",
+        "type": "ELLIPSE",
+        "x": 507,
+        "y": 122,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "isComponent": false,
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "constraints": {
+          "horizontal": "MIN",
+          "vertical": "MIN"
+        },
+        "layoutAlign": "INHERIT",
+        "layoutGrow": 0
+      },
+      {
+        "id": "672:1555",
+        "name": "FEATURED FILM >>>",
+        "type": "TEXT",
+        "x": 14,
+        "y": 300,
+        "width": 82,
+        "height": 6,
+        "rotation": 0,
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "isComponent": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1,
+        "strokeAlign": "OUTSIDE",
+        "constraints": {
+          "horizontal": "MIN",
+          "vertical": "MIN"
+        },
+        "layoutAlign": "INHERIT",
+        "layoutGrow": 0,
+        "text": "FEATURED FILM >>>",
+        "fontSize": 8,
+        "fontName": {
+          "family": "IBM Plex Mono",
+          "style": "Regular"
+        },
+        "fontWeight": 400,
+        "textAlign": "LEFT",
+        "textAlignVertical": "TOP",
+        "textAutoResize": "WIDTH_AND_HEIGHT",
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 26
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "textDecoration": "NONE"
+      },
+      {
+        "id": "677:1569",
+        "name": "ART FILM TITLE",
+        "type": "TEXT",
+        "x": 100,
+        "y": 300,
+        "width": 68,
+        "height": 6,
+        "rotation": 0,
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "isComponent": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1,
+        "strokeAlign": "OUTSIDE",
+        "constraints": {
+          "horizontal": "MIN",
+          "vertical": "MIN"
+        },
+        "layoutAlign": "INHERIT",
+        "layoutGrow": 0,
+        "text": "ART FILM TITLE",
+        "fontSize": 8,
+        "fontName": {
+          "family": "IBM Plex Mono",
+          "style": "Regular"
+        },
+        "fontWeight": 400,
+        "textAlign": "LEFT",
+        "textAlignVertical": "TOP",
+        "textAutoResize": "WIDTH_AND_HEIGHT",
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 26
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "textDecoration": "NONE"
+      },
+      {
+        "id": "672:1557",
+        "name": "Frame 3",
+        "type": "FRAME",
+        "x": 304,
+        "y": 298,
+        "width": 47,
+        "height": 10,
+        "rotation": 0,
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "isComponent": false,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "constraints": {
+          "horizontal": "MIN",
+          "vertical": "MIN"
+        },
+        "layoutAlign": "INHERIT",
+        "layoutGrow": 0,
+        "clipsContent": false,
+        "layoutMode": "HORIZONTAL",
+        "primaryAxisSizingMode": "AUTO",
+        "counterAxisSizingMode": "AUTO",
+        "primaryAxisAlignItems": "CENTER",
+        "counterAxisAlignItems": "CENTER",
+        "itemSpacing": 10,
+        "itemReverseZIndex": false,
+        "strokesIncludedInLayout": false,
+        "paddingLeft": 4,
+        "paddingRight": 4,
+        "paddingTop": 2,
+        "paddingBottom": 2,
+        "cornerRadius": 0,
+        "topLeftRadius": 0,
+        "topRightRadius": 0,
+        "bottomLeftRadius": 0,
+        "bottomRightRadius": 0,
+        "children": [
+          {
+            "id": "672:1556",
+            "name": "00:00:00",
+            "type": "TEXT",
+            "x": 4,
+            "y": 2,
+            "width": 39,
+            "height": 6,
+            "rotation": 0,
+            "opacity": 1,
+            "blendMode": "PASS_THROUGH",
+            "isMask": false,
+            "isComponent": true,
+            "fills": [
+              {
+                "type": "SOLID",
+                "visible": true,
+                "opacity": 1,
+                "blendMode": "NORMAL",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "boundVariables": {}
+              }
+            ],
+            "strokeWeight": 1,
+            "strokeAlign": "OUTSIDE",
+            "constraints": {
+              "horizontal": "MIN",
+              "vertical": "MIN"
+            },
+            "layoutAlign": "INHERIT",
+            "layoutGrow": 0,
+            "text": "00:00:00",
+            "fontSize": 8,
+            "fontName": {
+              "family": "IBM Plex Mono",
+              "style": "Medium"
+            },
+            "fontWeight": 500,
+            "textAlign": "LEFT",
+            "textAlignVertical": "TOP",
+            "textAutoResize": "WIDTH_AND_HEIGHT",
+            "lineHeight": {
+              "unit": "PIXELS",
+              "value": 26
+            },
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "textDecoration": "NONE"
+          }
+        ]
+      }
+    ]
+  }
+}

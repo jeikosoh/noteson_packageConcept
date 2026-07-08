@@ -1,0 +1,23 @@
+<svg width="244" height="468" viewBox="0 0 244 468" fill="none" xmlns="http://www.w3.org/2000/svg" id="animated-symbol-svg">
+  <defs>
+    <!-- Object-bounding noise filter so it moves with the shapes -->
+    <filter id="shapeNoise" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox">
+      <feTurbulence type="fractalNoise" baseFrequency="1.5" numOctaves="3" result="noise" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" in="noise" result="coloredNoise" />
+      <feComposite operator="in" in="coloredNoise" in2="SourceGraphic" result="noiseClipped" />
+      <feBlend mode="multiply" in="noiseClipped" in2="SourceGraphic" />
+    </filter>
+  </defs>
+
+  <g id="top-circle-anim">
+    <circle cx="143" cy="80" r="80" fill="#1A241B" filter="url(#shapeNoise)"/>
+  </g>
+  
+  <g id="bottom-circle-anim">
+    <circle cx="108.01" cy="360.428" r="80" transform="rotate(62.3158 108.01 360.428)" fill="#1A241B" filter="url(#shapeNoise)"/>
+  </g>
+  
+  <g id="rod-anim">
+    <rect x="139.854" y="158.755" width="237.023" height="25" rx="12.5" transform="rotate(68.0466 139.854 158.755)" fill="#FF4000" filter="url(#shapeNoise)"/>
+  </g>
+</svg>

@@ -1,0 +1,2587 @@
+{
+  "texts": {
+    "today_s_tea_date": "TODAY’S TEA  ––  TUESDAY, JULY 7, 2026",
+    "tea_title": "Milky Oolong",
+    "tea_description": "Taiwan • Caffeine • Silky • Milky • Sweet",
+    "hot_brew_label": "HOT",
+    "hot_brew_volume": "300ml",
+    "hot_brew_temperature": "98ºC",
+    "hot_brew_time": "4min",
+    "iced_brew_label": "ICED",
+    "iced_brew_volume": "150ml+ICE",
+    "iced_brew_temperature": "98ºC",
+    "iced_brew_time": "4min",
+    "tea_subtitle": "Texture of Mist",
+    "tea_text": "Alishan Jin Xuan tea offers a dramatic inversion: a naturally milky, velvety aroma developed to survive the 1,600m alpine freeze. Crisp at first, comforting to the end."
+  },
+  "colors": {
+    "today_s_tea": "#ffffff",
+    "tea_title": "#fcf5e5",
+    "tea_description": "#aaaaaa",
+    "hot": "#a82a00",
+    "hot_brew_label": "#ffffff",
+    "vector_6": "#ff4000",
+    "hot_brew_volume": "#fcf5e5",
+    "thermometer": "#ffffff",
+    "thermo_tube": "#ff4000",
+    "thermo_bulb": "#ff4000",
+    "hot_brew_temperature": "#fcf5e5",
+    "clock": "#ffffff",
+    "hot_brew_time": "#fcf5e5",
+    "cold": "#0079a8",
+    "iced_brew_label": "#ffffff",
+    "iced_brew_volume": "#fcf5e5",
+    "iced_brew_temperature": "#fcf5e5",
+    "iced_brew_time": "#fcf5e5",
+    "tea_subtitle": "#fcf5e5",
+    "tea_text": "#fcf5e5"
+  },
+  "tree": {
+    "id": "567:2420",
+    "name": "TODAY'S TEA",
+    "type": "FRAME",
+    "x": 0,
+    "y": 0,
+    "width": 574,
+    "height": 215,
+    "rotation": 0,
+    "opacity": 1,
+    "blendMode": "PASS_THROUGH",
+    "isMask": false,
+    "isComponent": true,
+    "fills": [
+      {
+        "type": "SOLID",
+        "visible": false,
+        "opacity": 0.10000000149011612,
+        "blendMode": "NORMAL",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "boundVariables": {}
+      }
+    ],
+    "strokeWeight": 1,
+    "strokeAlign": "INSIDE",
+    "effects": [
+      {
+        "type": "GLASS",
+        "visible": false,
+        "radius": 60,
+        "boundVariables": {},
+        "refraction": 0.800000011920929,
+        "depth": 60,
+        "lightAngle": -45,
+        "lightIntensity": 0.10000000149011612,
+        "dispersion": 0.800000011920929,
+        "splay": 0.10000000149011612
+      },
+      {
+        "type": "DROP_SHADOW",
+        "visible": true,
+        "radius": 4,
+        "boundVariables": {},
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 0.25
+        },
+        "offset": {
+          "x": 0,
+          "y": 4
+        },
+        "spread": 0,
+        "blendMode": "NORMAL",
+        "showShadowBehindNode": false
+      }
+    ],
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "layoutAlign": "STRETCH",
+    "layoutGrow": 0,
+    "clipsContent": false,
+    "layoutMode": "VERTICAL",
+    "primaryAxisSizingMode": "AUTO",
+    "counterAxisSizingMode": "FIXED",
+    "primaryAxisAlignItems": "MIN",
+    "counterAxisAlignItems": "MIN",
+    "itemSpacing": 16,
+    "itemReverseZIndex": false,
+    "strokesIncludedInLayout": false,
+    "paddingLeft": 24,
+    "paddingRight": 24,
+    "paddingTop": 24,
+    "paddingBottom": 24,
+    "cornerRadius": 16,
+    "topLeftRadius": 16,
+    "topRightRadius": 16,
+    "bottomLeftRadius": 16,
+    "bottomRightRadius": 16,
+    "children": [
+      {
+        "id": "567:2418",
+        "name": "Today's tea date",
+        "type": "TEXT",
+        "x": 24,
+        "y": 24,
+        "width": 231,
+        "height": 8,
+        "rotation": 0,
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "isComponent": false,
+        "strokeWeight": 1,
+        "strokeAlign": "OUTSIDE",
+        "constraints": {
+          "horizontal": "MIN",
+          "vertical": "MIN"
+        },
+        "layoutAlign": "INHERIT",
+        "layoutGrow": 0,
+        "text": "TODAY’S TEA  ––  TUESDAY, JULY 7, 2026",
+        "fontSize": 12
+      },
+      {
+        "id": "567:2422",
+        "name": "TEA_INFO_ROW",
+        "type": "FRAME",
+        "x": 24,
+        "y": 48,
+        "width": 526,
+        "height": 49,
+        "rotation": 0,
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "isComponent": true,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "constraints": {
+          "horizontal": "MIN",
+          "vertical": "MIN"
+        },
+        "layoutAlign": "INHERIT",
+        "layoutGrow": 0,
+        "clipsContent": false,
+        "layoutMode": "HORIZONTAL",
+        "primaryAxisSizingMode": "AUTO",
+        "counterAxisSizingMode": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "CENTER",
+        "itemSpacing": 36,
+        "itemReverseZIndex": false,
+        "strokesIncludedInLayout": false,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "cornerRadius": 0,
+        "topLeftRadius": 0,
+        "topRightRadius": 0,
+        "bottomLeftRadius": 0,
+        "bottomRightRadius": 0,
+        "children": [
+          {
+            "id": "571:2547",
+            "name": "TEA_TITLE_BLOCK",
+            "type": "FRAME",
+            "x": 0,
+            "y": 0,
+            "width": 226,
+            "height": 49,
+            "rotation": 0,
+            "opacity": 1,
+            "blendMode": "PASS_THROUGH",
+            "isMask": false,
+            "isComponent": true,
+            "strokeWeight": 1,
+            "strokeAlign": "INSIDE",
+            "constraints": {
+              "horizontal": "MIN",
+              "vertical": "MIN"
+            },
+            "layoutAlign": "INHERIT",
+            "layoutGrow": 0,
+            "clipsContent": false,
+            "layoutMode": "VERTICAL",
+            "primaryAxisSizingMode": "AUTO",
+            "counterAxisSizingMode": "AUTO",
+            "primaryAxisAlignItems": "CENTER",
+            "counterAxisAlignItems": "MIN",
+            "itemSpacing": 16,
+            "itemReverseZIndex": false,
+            "strokesIncludedInLayout": false,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "cornerRadius": 0,
+            "topLeftRadius": 0,
+            "topRightRadius": 0,
+            "bottomLeftRadius": 0,
+            "bottomRightRadius": 0,
+            "children": [
+              {
+                "id": "567:2419",
+                "name": "Tea title",
+                "type": "TEXT",
+                "x": 0,
+                "y": 0,
+                "width": 226,
+                "height": 25,
+                "rotation": 0,
+                "opacity": 1,
+                "blendMode": "PASS_THROUGH",
+                "isMask": false,
+                "isComponent": false,
+                "fills": [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 0.9882352948188782,
+                      "g": 0.9607843160629272,
+                      "b": 0.8980392217636108
+                    },
+                    "boundVariables": {}
+                  }
+                ],
+                "strokeWeight": 1,
+                "strokeAlign": "OUTSIDE",
+                "constraints": {
+                  "horizontal": "MIN",
+                  "vertical": "MIN"
+                },
+                "layoutAlign": "INHERIT",
+                "layoutGrow": 0,
+                "text": "Milky Oolong",
+                "fontSize": 36,
+                "fontName": {
+                  "family": "Pretendard",
+                  "style": "ExtraBold"
+                },
+                "fontWeight": 800,
+                "textAlign": "RIGHT",
+                "textAlignVertical": "TOP",
+                "textAutoResize": "WIDTH_AND_HEIGHT",
+                "lineHeight": {
+                  "unit": "AUTO"
+                },
+                "letterSpacing": {
+                  "unit": "PERCENT",
+                  "value": 0
+                },
+                "textDecoration": "NONE"
+              },
+              {
+                "id": "571:2546",
+                "name": "Tea description",
+                "type": "TEXT",
+                "x": 0,
+                "y": 41,
+                "width": 219,
+                "height": 8,
+                "rotation": 0,
+                "opacity": 1,
+                "blendMode": "PASS_THROUGH",
+                "isMask": false,
+                "isComponent": false,
+                "fills": [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 0.6666666865348816,
+                      "g": 0.6666666865348816,
+                      "b": 0.6666666865348816
+                    },
+                    "boundVariables": {}
+                  }
+                ],
+                "strokeWeight": 1,
+                "strokeAlign": "OUTSIDE",
+                "constraints": {
+                  "horizontal": "MIN",
+                  "vertical": "MIN"
+                },
+                "layoutAlign": "INHERIT",
+                "layoutGrow": 0,
+                "text": "Taiwan • Caffeine • Silky • Milky • Sweet",
+                "fontSize": 12,
+                "fontName": {
+                  "family": "Pretendard",
+                  "style": "Regular"
+                },
+                "fontWeight": 400,
+                "textAlign": "LEFT",
+                "textAlignVertical": "TOP",
+                "textAutoResize": "WIDTH_AND_HEIGHT",
+                "lineHeight": {
+                  "unit": "AUTO"
+                },
+                "letterSpacing": {
+                  "unit": "PERCENT",
+                  "value": 0
+                },
+                "textDecoration": "NONE"
+              }
+            ]
+          },
+          {
+            "id": "567:2424",
+            "name": "BREW_SPECS",
+            "type": "FRAME",
+            "x": 262,
+            "y": 2.5,
+            "width": 264,
+            "height": 44,
+            "rotation": 0,
+            "opacity": 1,
+            "blendMode": "PASS_THROUGH",
+            "isMask": false,
+            "isComponent": true,
+            "strokeWeight": 1,
+            "strokeAlign": "INSIDE",
+            "constraints": {
+              "horizontal": "MIN",
+              "vertical": "MIN"
+            },
+            "layoutAlign": "INHERIT",
+            "layoutGrow": 0,
+            "clipsContent": false,
+            "layoutMode": "VERTICAL",
+            "primaryAxisSizingMode": "AUTO",
+            "counterAxisSizingMode": "AUTO",
+            "primaryAxisAlignItems": "MIN",
+            "counterAxisAlignItems": "MIN",
+            "itemSpacing": 12,
+            "itemReverseZIndex": false,
+            "strokesIncludedInLayout": false,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "cornerRadius": 0,
+            "topLeftRadius": 0,
+            "topRightRadius": 0,
+            "bottomLeftRadius": 0,
+            "bottomRightRadius": 0,
+            "children": [
+              {
+                "id": "571:2474",
+                "name": "HOT_BREW_ROW",
+                "type": "FRAME",
+                "x": 0,
+                "y": 0,
+                "width": 230,
+                "height": 16,
+                "rotation": 0,
+                "opacity": 1,
+                "blendMode": "PASS_THROUGH",
+                "isMask": false,
+                "isComponent": true,
+                "strokeWeight": 1,
+                "strokeAlign": "INSIDE",
+                "constraints": {
+                  "horizontal": "MIN",
+                  "vertical": "MIN"
+                },
+                "layoutAlign": "INHERIT",
+                "layoutGrow": 0,
+                "clipsContent": false,
+                "layoutMode": "HORIZONTAL",
+                "primaryAxisSizingMode": "AUTO",
+                "counterAxisSizingMode": "AUTO",
+                "primaryAxisAlignItems": "MIN",
+                "counterAxisAlignItems": "CENTER",
+                "itemSpacing": 12,
+                "itemReverseZIndex": false,
+                "strokesIncludedInLayout": false,
+                "paddingLeft": 0,
+                "paddingRight": 0,
+                "paddingTop": 0,
+                "paddingBottom": 0,
+                "cornerRadius": 0,
+                "topLeftRadius": 0,
+                "topRightRadius": 0,
+                "bottomLeftRadius": 0,
+                "bottomRightRadius": 0,
+                "children": [
+                  {
+                    "id": "567:2429",
+                    "name": "HOT",
+                    "type": "FRAME",
+                    "x": 0,
+                    "y": 0,
+                    "width": 41,
+                    "height": 16,
+                    "rotation": 0,
+                    "opacity": 1,
+                    "blendMode": "PASS_THROUGH",
+                    "isMask": false,
+                    "isComponent": true,
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 0.800000011920929,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0.6600000262260437,
+                          "g": 0.16564705967903137,
+                          "b": 0
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "strokeWeight": 1,
+                    "strokeAlign": "INSIDE",
+                    "constraints": {
+                      "horizontal": "MIN",
+                      "vertical": "MIN"
+                    },
+                    "layoutAlign": "INHERIT",
+                    "layoutGrow": 0,
+                    "clipsContent": false,
+                    "layoutMode": "HORIZONTAL",
+                    "primaryAxisSizingMode": "AUTO",
+                    "counterAxisSizingMode": "AUTO",
+                    "primaryAxisAlignItems": "MIN",
+                    "counterAxisAlignItems": "MIN",
+                    "itemSpacing": 10,
+                    "itemReverseZIndex": false,
+                    "strokesIncludedInLayout": false,
+                    "paddingLeft": 8,
+                    "paddingRight": 8,
+                    "paddingTop": 4,
+                    "paddingBottom": 4,
+                    "cornerRadius": 12,
+                    "topLeftRadius": 12,
+                    "topRightRadius": 12,
+                    "bottomLeftRadius": 12,
+                    "bottomRightRadius": 12,
+                    "children": [
+                      {
+                        "id": "567:2423",
+                        "name": "Hot brew label",
+                        "type": "TEXT",
+                        "x": 8,
+                        "y": 4,
+                        "width": 25,
+                        "height": 8,
+                        "rotation": 0,
+                        "opacity": 1,
+                        "blendMode": "PASS_THROUGH",
+                        "isMask": false,
+                        "isComponent": false,
+                        "fills": [
+                          {
+                            "type": "SOLID",
+                            "visible": true,
+                            "opacity": 1,
+                            "blendMode": "NORMAL",
+                            "color": {
+                              "r": 1,
+                              "g": 1,
+                              "b": 1
+                            },
+                            "boundVariables": {}
+                          }
+                        ],
+                        "strokeWeight": 1,
+                        "strokeAlign": "OUTSIDE",
+                        "constraints": {
+                          "horizontal": "MIN",
+                          "vertical": "MIN"
+                        },
+                        "layoutAlign": "INHERIT",
+                        "layoutGrow": 0,
+                        "text": "HOT",
+                        "fontSize": 12,
+                        "fontName": {
+                          "family": "Pretendard",
+                          "style": "Medium"
+                        },
+                        "fontWeight": 500,
+                        "textAlign": "LEFT",
+                        "textAlignVertical": "TOP",
+                        "textAutoResize": "WIDTH_AND_HEIGHT",
+                        "lineHeight": {
+                          "unit": "AUTO"
+                        },
+                        "letterSpacing": {
+                          "unit": "PERCENT",
+                          "value": 0
+                        },
+                        "textDecoration": "NONE"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "570:2457",
+                    "name": "HOT_BREW_DETAILS",
+                    "type": "FRAME",
+                    "x": 53,
+                    "y": 1,
+                    "width": 177,
+                    "height": 14,
+                    "rotation": 0,
+                    "opacity": 1,
+                    "blendMode": "PASS_THROUGH",
+                    "isMask": false,
+                    "isComponent": true,
+                    "strokeWeight": 1,
+                    "strokeAlign": "INSIDE",
+                    "constraints": {
+                      "horizontal": "MIN",
+                      "vertical": "MIN"
+                    },
+                    "layoutAlign": "INHERIT",
+                    "layoutGrow": 0,
+                    "clipsContent": false,
+                    "layoutMode": "HORIZONTAL",
+                    "primaryAxisSizingMode": "AUTO",
+                    "counterAxisSizingMode": "AUTO",
+                    "primaryAxisAlignItems": "MIN",
+                    "counterAxisAlignItems": "MIN",
+                    "itemSpacing": 8,
+                    "itemReverseZIndex": false,
+                    "strokesIncludedInLayout": false,
+                    "paddingLeft": 0,
+                    "paddingRight": 0,
+                    "paddingTop": 0,
+                    "paddingBottom": 0,
+                    "cornerRadius": 0,
+                    "topLeftRadius": 0,
+                    "topRightRadius": 0,
+                    "bottomLeftRadius": 0,
+                    "bottomRightRadius": 0,
+                    "children": [
+                      {
+                        "id": "567:2440",
+                        "name": "SPEC_VOLUME",
+                        "type": "FRAME",
+                        "x": 0,
+                        "y": 0,
+                        "width": 59,
+                        "height": 13,
+                        "rotation": 0,
+                        "opacity": 1,
+                        "blendMode": "PASS_THROUGH",
+                        "isMask": false,
+                        "isComponent": true,
+                        "strokeWeight": 1,
+                        "strokeAlign": "INSIDE",
+                        "constraints": {
+                          "horizontal": "MIN",
+                          "vertical": "MIN"
+                        },
+                        "layoutAlign": "INHERIT",
+                        "layoutGrow": 0,
+                        "clipsContent": false,
+                        "layoutMode": "HORIZONTAL",
+                        "primaryAxisSizingMode": "AUTO",
+                        "counterAxisSizingMode": "AUTO",
+                        "primaryAxisAlignItems": "MIN",
+                        "counterAxisAlignItems": "CENTER",
+                        "itemSpacing": 4,
+                        "itemReverseZIndex": false,
+                        "strokesIncludedInLayout": false,
+                        "paddingLeft": 0,
+                        "paddingRight": 0,
+                        "paddingTop": 0,
+                        "paddingBottom": 0,
+                        "cornerRadius": 0,
+                        "topLeftRadius": 0,
+                        "topRightRadius": 0,
+                        "bottomLeftRadius": 0,
+                        "bottomRightRadius": 0,
+                        "children": [
+                          {
+                            "id": "575:5",
+                            "name": "ICON_CUP",
+                            "type": "FRAME",
+                            "x": 0,
+                            "y": 0,
+                            "width": 13,
+                            "height": 13,
+                            "rotation": 0,
+                            "opacity": 1,
+                            "blendMode": "PASS_THROUGH",
+                            "isMask": false,
+                            "isComponent": true,
+                            "strokeWeight": 1,
+                            "strokeAlign": "INSIDE",
+                            "constraints": {
+                              "horizontal": "MIN",
+                              "vertical": "MIN"
+                            },
+                            "layoutAlign": "INHERIT",
+                            "layoutGrow": 0,
+                            "clipsContent": false,
+                            "layoutMode": "NONE",
+                            "primaryAxisSizingMode": "AUTO",
+                            "counterAxisSizingMode": "FIXED",
+                            "primaryAxisAlignItems": "MIN",
+                            "counterAxisAlignItems": "MIN",
+                            "itemSpacing": 0,
+                            "itemReverseZIndex": false,
+                            "strokesIncludedInLayout": false,
+                            "paddingLeft": 0,
+                            "paddingRight": 0,
+                            "paddingTop": 0,
+                            "paddingBottom": 0,
+                            "cornerRadius": 0,
+                            "topLeftRadius": 0,
+                            "topRightRadius": 0,
+                            "bottomLeftRadius": 0,
+                            "bottomRightRadius": 0,
+                            "children": [
+                              {
+                                "id": "571:2465",
+                                "name": "Vector 6",
+                                "type": "VECTOR",
+                                "x": 0.63427734375,
+                                "y": 4.5732598304748535,
+                                "width": 11.793160438537598,
+                                "height": 8.148117065429688,
+                                "rotation": 0,
+                                "opacity": 1,
+                                "blendMode": "PASS_THROUGH",
+                                "isMask": false,
+                                "isVectorAsset": true,
+                                "isComponent": false,
+                                "fills": [
+                                  {
+                                    "type": "SOLID",
+                                    "visible": true,
+                                    "opacity": 1,
+                                    "blendMode": "NORMAL",
+                                    "color": {
+                                      "r": 1,
+                                      "g": 0.250980406999588,
+                                      "b": 0
+                                    },
+                                    "boundVariables": {}
+                                  }
+                                ],
+                                "strokeWeight": 1,
+                                "strokeAlign": "CENTER",
+                                "constraints": {
+                                  "horizontal": "MIN",
+                                  "vertical": "MIN"
+                                },
+                                "layoutAlign": "INHERIT",
+                                "layoutGrow": 0
+                              },
+                              {
+                                "id": "570:2461",
+                                "name": "Vector 2",
+                                "type": "VECTOR",
+                                "x": 0,
+                                "y": 0,
+                                "width": 13,
+                                "height": 13,
+                                "rotation": 0,
+                                "opacity": 1,
+                                "blendMode": "PASS_THROUGH",
+                                "isMask": false,
+                                "isVectorAsset": true,
+                                "isComponent": false,
+                                "strokes": [
+                                  {
+                                    "type": "SOLID",
+                                    "visible": true,
+                                    "opacity": 1,
+                                    "blendMode": "NORMAL",
+                                    "color": {
+                                      "r": 0.9882352948188782,
+                                      "g": 0.9607843160629272,
+                                      "b": 0.8980392217636108
+                                    },
+                                    "boundVariables": {}
+                                  }
+                                ],
+                                "strokeWeight": 1,
+                                "strokeAlign": "CENTER",
+                                "constraints": {
+                                  "horizontal": "MIN",
+                                  "vertical": "MIN"
+                                },
+                                "layoutAlign": "INHERIT",
+                                "layoutGrow": 0
+                              },
+                              {
+                                "id": "570:2462",
+                                "name": "Vector 3",
+                                "type": "VECTOR",
+                                "x": 0,
+                                "y": -0.00006985664367675781,
+                                "width": 5.073171138763428,
+                                "height": 0,
+                                "rotation": 0,
+                                "opacity": 1,
+                                "blendMode": "PASS_THROUGH",
+                                "isMask": false,
+                                "isVectorAsset": true,
+                                "isComponent": false,
+                                "strokes": [
+                                  {
+                                    "type": "SOLID",
+                                    "visible": true,
+                                    "opacity": 1,
+                                    "blendMode": "NORMAL",
+                                    "color": {
+                                      "r": 0.9882352948188782,
+                                      "g": 0.9607843160629272,
+                                      "b": 0.8980392217636108
+                                    },
+                                    "boundVariables": {}
+                                  }
+                                ],
+                                "strokeWeight": 1,
+                                "strokeAlign": "CENTER",
+                                "constraints": {
+                                  "horizontal": "MIN",
+                                  "vertical": "MIN"
+                                },
+                                "layoutAlign": "INHERIT",
+                                "layoutGrow": 0
+                              },
+                              {
+                                "id": "571:2463",
+                                "name": "Vector 4",
+                                "type": "VECTOR",
+                                "x": 0,
+                                "y": 0.0001220703125,
+                                "width": 5.073171138763428,
+                                "height": 0,
+                                "rotation": 0,
+                                "opacity": 1,
+                                "blendMode": "PASS_THROUGH",
+                                "isMask": false,
+                                "isVectorAsset": true,
+                                "isComponent": false,
+                                "strokes": [
+                                  {
+                                    "type": "SOLID",
+                                    "visible": true,
+                                    "opacity": 1,
+                                    "blendMode": "NORMAL",
+                                    "color": {
+                                      "r": 0.9882352948188782,
+                                      "g": 0.9607843160629272,
+                                      "b": 0.8980392217636108
+                                    },
+                                    "boundVariables": {}
+                                  }
+                                ],
+                                "strokeWeight": 1,
+                                "strokeAlign": "CENTER",
+                                "constraints": {
+                                  "horizontal": "MIN",
+                                  "vertical": "MIN"
+                                },
+                                "layoutAlign": "INHERIT",
+                                "layoutGrow": 0
+                              },
+                              {
+                                "id": "571:2464",
+                                "name": "Vector 5",
+                                "type": "VECTOR",
+                                "x": 0,
+                                "y": 0.00006961822509765625,
+                                "width": 5.073171138763428,
+                                "height": 0,
+                                "rotation": 0,
+                                "opacity": 1,
+                                "blendMode": "PASS_THROUGH",
+                                "isMask": false,
+                                "isVectorAsset": true,
+                                "isComponent": false,
+                                "strokes": [
+                                  {
+                                    "type": "SOLID",
+                                    "visible": true,
+                                    "opacity": 1,
+                                    "blendMode": "NORMAL",
+                                    "color": {
+                                      "r": 0.9882352948188782,
+                                      "g": 0.9607843160629272,
+                                      "b": 0.8980392217636108
+                                    },
+                                    "boundVariables": {}
+                                  }
+                                ],
+                                "strokeWeight": 1,
+                                "strokeAlign": "CENTER",
+                                "constraints": {
+                                  "horizontal": "MIN",
+                                  "vertical": "MIN"
+                                },
+                                "layoutAlign": "INHERIT",
+                                "layoutGrow": 0
+                              }
+                            ]
+                          },
+                          {
+                            "id": "567:2425",
+                            "name": "Hot brew volume",
+                            "type": "TEXT",
+                            "x": 17,
+                            "y": 1.5,
+                            "width": 42,
+                            "height": 10,
+                            "rotation": 0,
+                            "opacity": 1,
+                            "blendMode": "PASS_THROUGH",
+                            "isMask": false,
+                            "isComponent": false,
+                            "fills": [
+                              {
+                                "type": "SOLID",
+                                "visible": true,
+                                "opacity": 1,
+                                "blendMode": "NORMAL",
+                                "color": {
+                                  "r": 0.9882352948188782,
+                                  "g": 0.9607843160629272,
+                                  "b": 0.8980392217636108
+                                },
+                                "boundVariables": {}
+                              }
+                            ],
+                            "strokeWeight": 1,
+                            "strokeAlign": "OUTSIDE",
+                            "constraints": {
+                              "horizontal": "MIN",
+                              "vertical": "MIN"
+                            },
+                            "layoutAlign": "INHERIT",
+                            "layoutGrow": 0,
+                            "text": "300ml",
+                            "fontSize": 14,
+                            "fontName": {
+                              "family": "IBM Plex Mono",
+                              "style": "Medium"
+                            },
+                            "fontWeight": 500,
+                            "textAlign": "LEFT",
+                            "textAlignVertical": "TOP",
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "lineHeight": {
+                              "unit": "AUTO"
+                            },
+                            "letterSpacing": {
+                              "unit": "PERCENT",
+                              "value": 0
+                            },
+                            "textDecoration": "NONE"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "571:2467",
+                        "name": "SPEC_TEMP",
+                        "type": "FRAME",
+                        "x": 67,
+                        "y": 0,
+                        "width": 50,
+                        "height": 14,
+                        "rotation": 0,
+                        "opacity": 1,
+                        "blendMode": "PASS_THROUGH",
+                        "isMask": false,
+                        "isComponent": true,
+                        "strokeWeight": 1,
+                        "strokeAlign": "INSIDE",
+                        "constraints": {
+                          "horizontal": "MIN",
+                          "vertical": "MIN"
+                        },
+                        "layoutAlign": "INHERIT",
+                        "layoutGrow": 0,
+                        "clipsContent": false,
+                        "layoutMode": "HORIZONTAL",
+                        "primaryAxisSizingMode": "AUTO",
+                        "counterAxisSizingMode": "AUTO",
+                        "primaryAxisAlignItems": "MIN",
+                        "counterAxisAlignItems": "CENTER",
+                        "itemSpacing": 2,
+                        "itemReverseZIndex": false,
+                        "strokesIncludedInLayout": false,
+                        "paddingLeft": 0,
+                        "paddingRight": 0,
+                        "paddingTop": 0,
+                        "paddingBottom": 0,
+                        "cornerRadius": 0,
+                        "topLeftRadius": 0,
+                        "topRightRadius": 0,
+                        "bottomLeftRadius": 0,
+                        "bottomRightRadius": 0,
+                        "children": [
+                          {
+                            "id": "571:2468",
+                            "name": "Thermometer",
+                            "type": "FRAME",
+                            "x": 0,
+                            "y": 0,
+                            "width": 14,
+                            "height": 14,
+                            "rotation": 0,
+                            "opacity": 1,
+                            "blendMode": "PASS_THROUGH",
+                            "isMask": false,
+                            "isComponent": false,
+                            "fills": [
+                              {
+                                "type": "SOLID",
+                                "visible": false,
+                                "opacity": 1,
+                                "blendMode": "NORMAL",
+                                "color": {
+                                  "r": 1,
+                                  "g": 1,
+                                  "b": 1
+                                },
+                                "boundVariables": {}
+                              }
+                            ],
+                            "strokeWeight": 1,
+                            "strokeAlign": "INSIDE",
+                            "constraints": {
+                              "horizontal": "MIN",
+                              "vertical": "MIN"
+                            },
+                            "layoutAlign": "INHERIT",
+                            "layoutGrow": 0,
+                            "clipsContent": false,
+                            "layoutMode": "NONE",
+                            "primaryAxisSizingMode": "AUTO",
+                            "counterAxisSizingMode": "FIXED",
+                            "primaryAxisAlignItems": "MIN",
+                            "counterAxisAlignItems": "MIN",
+                            "itemSpacing": 0,
+                            "itemReverseZIndex": false,
+                            "strokesIncludedInLayout": false,
+                            "paddingLeft": 0,
+                            "paddingRight": 0,
+                            "paddingTop": 0,
+                            "paddingBottom": 0,
+                            "cornerRadius": 0,
+                            "topLeftRadius": 0,
+                            "topRightRadius": 0,
+                            "bottomLeftRadius": 0,
+                            "bottomRightRadius": 0,
+                            "children": [
+                              {
+                                "id": "571:2469",
+                                "name": "Icon",
+                                "type": "VECTOR",
+                                "x": 4.375,
+                                "y": 0.875,
+                                "width": 5.25,
+                                "height": 12.834300994873047,
+                                "rotation": 0,
+                                "opacity": 1,
+                                "blendMode": "PASS_THROUGH",
+                                "isMask": false,
+                                "isVectorAsset": true,
+                                "isComponent": false,
+                                "strokes": [
+                                  {
+                                    "type": "SOLID",
+                                    "visible": true,
+                                    "opacity": 1,
+                                    "blendMode": "NORMAL",
+                                    "color": {
+                                      "r": 0.9882352948188782,
+                                      "g": 0.9607843160629272,
+                                      "b": 0.8980392217636108
+                                    },
+                                    "boundVariables": {}
+                                  }
+                                ],
+                                "strokeWeight": 1,
+                                "strokeAlign": "OUTSIDE",
+                                "constraints": {
+                                  "horizontal": "SCALE",
+                                  "vertical": "CENTER"
+                                },
+                                "layoutAlign": "INHERIT",
+                                "layoutGrow": 0
+                              },
+                              {
+                                "id": "575:7",
+                                "name": "ICON_THERMOMETER",
+                                "type": "FRAME",
+                                "x": 8.75,
+                                "y": 12.97509765625,
+                                "width": 3.5,
+                                "height": 8.97509765625,
+                                "rotation": 179.99999499104388,
+                                "opacity": 1,
+                                "blendMode": "PASS_THROUGH",
+                                "isMask": false,
+                                "isComponent": true,
+                                "strokeWeight": 1,
+                                "strokeAlign": "INSIDE",
+                                "constraints": {
+                                  "horizontal": "MIN",
+                                  "vertical": "MIN"
+                                },
+                                "layoutAlign": "INHERIT",
+                                "layoutGrow": 0,
+                                "clipsContent": false,
+                                "layoutMode": "NONE",
+                                "primaryAxisSizingMode": "AUTO",
+                                "counterAxisSizingMode": "FIXED",
+                                "primaryAxisAlignItems": "MIN",
+                                "counterAxisAlignItems": "MIN",
+                                "itemSpacing": 0,
+                                "itemReverseZIndex": false,
+                                "strokesIncludedInLayout": false,
+                                "paddingLeft": 0,
+                                "paddingRight": 0,
+                                "paddingTop": 0,
+                                "paddingBottom": 0,
+                                "cornerRadius": 0,
+                                "topLeftRadius": 0,
+                                "topRightRadius": 0,
+                                "bottomLeftRadius": 0,
+                                "bottomRightRadius": 0,
+                                "children": [
+                                  {
+                                    "id": "571:2471",
+                                    "name": "THERMO_TUBE",
+                                    "type": "RECTANGLE",
+                                    "x": 1.3125,
+                                    "y": 0,
+                                    "width": 0.875,
+                                    "height": 7.875,
+                                    "rotation": 0,
+                                    "opacity": 1,
+                                    "blendMode": "PASS_THROUGH",
+                                    "isMask": false,
+                                    "isComponent": true,
+                                    "fills": [
+                                      {
+                                        "type": "SOLID",
+                                        "visible": true,
+                                        "opacity": 1,
+                                        "blendMode": "NORMAL",
+                                        "color": {
+                                          "r": 1,
+                                          "g": 0.250980406999588,
+                                          "b": 0
+                                        },
+                                        "boundVariables": {}
+                                      }
+                                    ],
+                                    "strokeWeight": 1,
+                                    "strokeAlign": "INSIDE",
+                                    "constraints": {
+                                      "horizontal": "SCALE",
+                                      "vertical": "SCALE"
+                                    },
+                                    "layoutAlign": "INHERIT",
+                                    "layoutGrow": 0
+                                  },
+                                  {
+                                    "id": "571:2472",
+                                    "name": "THERMO_BULB",
+                                    "type": "ELLIPSE",
+                                    "x": 0,
+                                    "y": 0,
+                                    "width": 3.5,
+                                    "height": 3.5,
+                                    "rotation": 0,
+                                    "opacity": 1,
+                                    "blendMode": "PASS_THROUGH",
+                                    "isMask": false,
+                                    "isComponent": true,
+                                    "fills": [
+                                      {
+                                        "type": "SOLID",
+                                        "visible": true,
+                                        "opacity": 1,
+                                        "blendMode": "NORMAL",
+                                        "color": {
+                                          "r": 1,
+                                          "g": 0.250980406999588,
+                                          "b": 0
+                                        },
+                                        "boundVariables": {}
+                                      }
+                                    ],
+                                    "strokeWeight": 1,
+                                    "strokeAlign": "INSIDE",
+                                    "constraints": {
+                                      "horizontal": "SCALE",
+                                      "vertical": "CENTER"
+                                    },
+                                    "layoutAlign": "INHERIT",
+                                    "layoutGrow": 0
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "id": "571:2473",
+                            "name": "Hot brew temperature",
+                            "type": "TEXT",
+                            "x": 16,
+                            "y": 2,
+                            "width": 34,
+                            "height": 10,
+                            "rotation": 0,
+                            "opacity": 1,
+                            "blendMode": "PASS_THROUGH",
+                            "isMask": false,
+                            "isComponent": false,
+                            "fills": [
+                              {
+                                "type": "SOLID",
+                                "visible": true,
+                                "opacity": 1,
+                                "blendMode": "NORMAL",
+                                "color": {
+                                  "r": 0.9882352948188782,
+                                  "g": 0.9607843160629272,
+                                  "b": 0.8980392217636108
+                                },
+                                "boundVariables": {}
+                              }
+                            ],
+                            "strokeWeight": 1,
+                            "strokeAlign": "OUTSIDE",
+                            "constraints": {
+                              "horizontal": "MIN",
+                              "vertical": "MIN"
+                            },
+                            "layoutAlign": "INHERIT",
+                            "layoutGrow": 0,
+                            "text": "98ºC ",
+                            "fontSize": 14,
+                            "fontName": {
+                              "family": "IBM Plex Mono",
+                              "style": "Medium"
+                            },
+                            "fontWeight": 500,
+                            "textAlign": "LEFT",
+                            "textAlignVertical": "TOP",
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "lineHeight": {
+                              "unit": "AUTO"
+                            },
+                            "letterSpacing": {
+                              "unit": "PERCENT",
+                              "value": 0
+                            },
+                            "textDecoration": "NONE"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "567:2447",
+                        "name": "SPEC_TIME",
+                        "type": "FRAME",
+                        "x": 125,
+                        "y": 0,
+                        "width": 52,
+                        "height": 14,
+                        "rotation": 0,
+                        "opacity": 1,
+                        "blendMode": "PASS_THROUGH",
+                        "isMask": false,
+                        "isComponent": true,
+                        "strokeWeight": 1,
+                        "strokeAlign": "INSIDE",
+                        "constraints": {
+                          "horizontal": "MIN",
+                          "vertical": "MIN"
+                        },
+                        "layoutAlign": "INHERIT",
+                        "layoutGrow": 0,
+                        "clipsContent": false,
+                        "layoutMode": "HORIZONTAL",
+                        "primaryAxisSizingMode": "AUTO",
+                        "counterAxisSizingMode": "AUTO",
+                        "primaryAxisAlignItems": "MIN",
+                        "counterAxisAlignItems": "CENTER",
+                        "itemSpacing": 4,
+                        "itemReverseZIndex": false,
+                        "strokesIncludedInLayout": false,
+                        "paddingLeft": 0,
+                        "paddingRight": 0,
+                        "paddingTop": 0,
+                        "paddingBottom": 0,
+                        "cornerRadius": 0,
+                        "topLeftRadius": 0,
+                        "topRightRadius": 0,
+                        "bottomLeftRadius": 0,
+                        "bottomRightRadius": 0,
+                        "children": [
+                          {
+                            "id": "567:2454",
+                            "name": "Clock",
+                            "type": "FRAME",
+                            "x": 0,
+                            "y": 0,
+                            "width": 14,
+                            "height": 14,
+                            "rotation": 0,
+                            "opacity": 1,
+                            "blendMode": "PASS_THROUGH",
+                            "isMask": false,
+                            "isComponent": false,
+                            "fills": [
+                              {
+                                "type": "SOLID",
+                                "visible": false,
+                                "opacity": 1,
+                                "blendMode": "NORMAL",
+                                "color": {
+                                  "r": 1,
+                                  "g": 1,
+                                  "b": 1
+                                },
+                                "boundVariables": {}
+                              }
+                            ],
+                            "strokeWeight": 1,
+                            "strokeAlign": "INSIDE",
+                            "constraints": {
+                              "horizontal": "MIN",
+                              "vertical": "MIN"
+                            },
+                            "layoutAlign": "INHERIT",
+                            "layoutGrow": 0,
+                            "clipsContent": false,
+                            "layoutMode": "NONE",
+                            "primaryAxisSizingMode": "AUTO",
+                            "counterAxisSizingMode": "FIXED",
+                            "primaryAxisAlignItems": "MIN",
+                            "counterAxisAlignItems": "MIN",
+                            "itemSpacing": 0,
+                            "itemReverseZIndex": false,
+                            "strokesIncludedInLayout": false,
+                            "paddingLeft": 0,
+                            "paddingRight": 0,
+                            "paddingTop": 0,
+                            "paddingBottom": 0,
+                            "cornerRadius": 0,
+                            "topLeftRadius": 0,
+                            "topRightRadius": 0,
+                            "bottomLeftRadius": 0,
+                            "bottomRightRadius": 0,
+                            "children": [
+                              {
+                                "id": "567:2455",
+                                "name": "Icon",
+                                "type": "VECTOR",
+                                "x": 1,
+                                "y": 1,
+                                "width": 11.666666984558105,
+                                "height": 11.666666984558105,
+                                "rotation": 0,
+                                "opacity": 1,
+                                "blendMode": "PASS_THROUGH",
+                                "isMask": false,
+                                "isVectorAsset": true,
+                                "isComponent": false,
+                                "strokes": [
+                                  {
+                                    "type": "SOLID",
+                                    "visible": true,
+                                    "opacity": 1,
+                                    "blendMode": "NORMAL",
+                                    "color": {
+                                      "r": 0.9882352948188782,
+                                      "g": 0.9607843160629272,
+                                      "b": 0.8980392217636108
+                                    },
+                                    "boundVariables": {}
+                                  }
+                                ],
+                                "strokeWeight": 1,
+                                "strokeAlign": "CENTER",
+                                "constraints": {
+                                  "horizontal": "SCALE",
+                                  "vertical": "SCALE"
+                                },
+                                "layoutAlign": "INHERIT",
+                                "layoutGrow": 0
+                              },
+                              {
+                                "id": "567:2456",
+                                "name": "Vector 1",
+                                "type": "VECTOR",
+                                "x": 6.800048828125,
+                                "y": 3,
+                                "width": 0,
+                                "height": 3.800048828125,
+                                "rotation": 0,
+                                "opacity": 1,
+                                "blendMode": "PASS_THROUGH",
+                                "isMask": false,
+                                "isVectorAsset": true,
+                                "isComponent": false,
+                                "strokes": [
+                                  {
+                                    "type": "SOLID",
+                                    "visible": true,
+                                    "opacity": 1,
+                                    "blendMode": "NORMAL",
+                                    "color": {
+                                      "r": 1,
+                                      "g": 0.250980406999588,
+                                      "b": 0
+                                    },
+                                    "boundVariables": {}
+                                  }
+                                ],
+                                "strokeWeight": 1,
+                                "strokeAlign": "CENTER",
+                                "constraints": {
+                                  "horizontal": "MIN",
+                                  "vertical": "MIN"
+                                },
+                                "layoutAlign": "INHERIT",
+                                "layoutGrow": 0
+                              }
+                            ]
+                          },
+                          {
+                            "id": "567:2453",
+                            "name": "Hot brew time",
+                            "type": "TEXT",
+                            "x": 18,
+                            "y": 2,
+                            "width": 34,
+                            "height": 10,
+                            "rotation": 0,
+                            "opacity": 1,
+                            "blendMode": "PASS_THROUGH",
+                            "isMask": false,
+                            "isComponent": false,
+                            "fills": [
+                              {
+                                "type": "SOLID",
+                                "visible": true,
+                                "opacity": 1,
+                                "blendMode": "NORMAL",
+                                "color": {
+                                  "r": 0.9882352948188782,
+                                  "g": 0.9607843160629272,
+                                  "b": 0.8980392217636108
+                                },
+                                "boundVariables": {}
+                              }
+                            ],
+                            "strokeWeight": 1,
+                            "strokeAlign": "OUTSIDE",
+                            "constraints": {
+                              "horizontal": "MIN",
+                              "vertical": "MIN"
+                            },
+                            "layoutAlign": "INHERIT",
+                            "layoutGrow": 0,
+                            "text": "4min",
+                            "fontSize": 14,
+                            "fontName": {
+                              "family": "IBM Plex Mono",
+                              "style": "Medium"
+                            },
+                            "fontWeight": 500,
+                            "textAlign": "LEFT",
+                            "textAlignVertical": "TOP",
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "lineHeight": {
+                              "unit": "AUTO"
+                            },
+                            "letterSpacing": {
+                              "unit": "PERCENT",
+                              "value": 0
+                            },
+                            "textDecoration": "NONE"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "571:2496",
+                "name": "COLD_BREW_ROW",
+                "type": "FRAME",
+                "x": 0,
+                "y": 28,
+                "width": 264,
+                "height": 16,
+                "rotation": 0,
+                "opacity": 1,
+                "blendMode": "PASS_THROUGH",
+                "isMask": false,
+                "isComponent": true,
+                "strokeWeight": 1,
+                "strokeAlign": "INSIDE",
+                "constraints": {
+                  "horizontal": "MIN",
+                  "vertical": "MIN"
+                },
+                "layoutAlign": "INHERIT",
+                "layoutGrow": 0,
+                "clipsContent": false,
+                "layoutMode": "HORIZONTAL",
+                "primaryAxisSizingMode": "AUTO",
+                "counterAxisSizingMode": "AUTO",
+                "primaryAxisAlignItems": "MIN",
+                "counterAxisAlignItems": "CENTER",
+                "itemSpacing": 12,
+                "itemReverseZIndex": false,
+                "strokesIncludedInLayout": false,
+                "paddingLeft": 0,
+                "paddingRight": 0,
+                "paddingTop": 0,
+                "paddingBottom": 0,
+                "cornerRadius": 0,
+                "topLeftRadius": 0,
+                "topRightRadius": 0,
+                "bottomLeftRadius": 0,
+                "bottomRightRadius": 0,
+                "children": [
+                  {
+                    "id": "567:2430",
+                    "name": "COLD",
+                    "type": "FRAME",
+                    "x": 0,
+                    "y": 0,
+                    "width": 41,
+                    "height": 16,
+                    "rotation": 0,
+                    "opacity": 1,
+                    "blendMode": "PASS_THROUGH",
+                    "isMask": false,
+                    "isComponent": true,
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 0.800000011920929,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0,
+                          "g": 0.47300001978874207,
+                          "b": 0.6600000262260437
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "strokeWeight": 1,
+                    "strokeAlign": "INSIDE",
+                    "constraints": {
+                      "horizontal": "MIN",
+                      "vertical": "MIN"
+                    },
+                    "layoutAlign": "INHERIT",
+                    "layoutGrow": 0,
+                    "clipsContent": false,
+                    "layoutMode": "HORIZONTAL",
+                    "primaryAxisSizingMode": "FIXED",
+                    "counterAxisSizingMode": "AUTO",
+                    "primaryAxisAlignItems": "MIN",
+                    "counterAxisAlignItems": "MIN",
+                    "itemSpacing": 10,
+                    "itemReverseZIndex": false,
+                    "strokesIncludedInLayout": false,
+                    "paddingLeft": 8,
+                    "paddingRight": 8,
+                    "paddingTop": 4,
+                    "paddingBottom": 4,
+                    "cornerRadius": 12,
+                    "topLeftRadius": 12,
+                    "topRightRadius": 12,
+                    "bottomLeftRadius": 12,
+                    "bottomRightRadius": 12,
+                    "children": [
+                      {
+                        "id": "567:2431",
+                        "name": "Iced brew label",
+                        "type": "TEXT",
+                        "x": 8,
+                        "y": 4,
+                        "width": 27,
+                        "height": 8,
+                        "rotation": 0,
+                        "opacity": 1,
+                        "blendMode": "PASS_THROUGH",
+                        "isMask": false,
+                        "isComponent": false,
+                        "fills": [
+                          {
+                            "type": "SOLID",
+                            "visible": true,
+                            "opacity": 1,
+                            "blendMode": "NORMAL",
+                            "color": {
+                              "r": 1,
+                              "g": 1,
+                              "b": 1
+                            },
+                            "boundVariables": {}
+                          }
+                        ],
+                        "strokeWeight": 1,
+                        "strokeAlign": "OUTSIDE",
+                        "constraints": {
+                          "horizontal": "MIN",
+                          "vertical": "MIN"
+                        },
+                        "layoutAlign": "INHERIT",
+                        "layoutGrow": 0,
+                        "text": "ICED",
+                        "fontSize": 12,
+                        "fontName": {
+                          "family": "Pretendard",
+                          "style": "Medium"
+                        },
+                        "fontWeight": 500,
+                        "textAlign": "LEFT",
+                        "textAlignVertical": "TOP",
+                        "textAutoResize": "WIDTH_AND_HEIGHT",
+                        "lineHeight": {
+                          "unit": "AUTO"
+                        },
+                        "letterSpacing": {
+                          "unit": "PERCENT",
+                          "value": 0
+                        },
+                        "textDecoration": "NONE"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "571:2497",
+                    "name": "COLD_BREW_DETAILS",
+                    "type": "FRAME",
+                    "x": 53,
+                    "y": 1,
+                    "width": 211,
+                    "height": 14,
+                    "rotation": 0,
+                    "opacity": 1,
+                    "blendMode": "PASS_THROUGH",
+                    "isMask": false,
+                    "isComponent": true,
+                    "strokeWeight": 1,
+                    "strokeAlign": "INSIDE",
+                    "constraints": {
+                      "horizontal": "MIN",
+                      "vertical": "MIN"
+                    },
+                    "layoutAlign": "INHERIT",
+                    "layoutGrow": 0,
+                    "clipsContent": false,
+                    "layoutMode": "HORIZONTAL",
+                    "primaryAxisSizingMode": "AUTO",
+                    "counterAxisSizingMode": "AUTO",
+                    "primaryAxisAlignItems": "MIN",
+                    "counterAxisAlignItems": "MIN",
+                    "itemSpacing": 8,
+                    "itemReverseZIndex": false,
+                    "strokesIncludedInLayout": false,
+                    "paddingLeft": 0,
+                    "paddingRight": 0,
+                    "paddingTop": 0,
+                    "paddingBottom": 0,
+                    "cornerRadius": 0,
+                    "topLeftRadius": 0,
+                    "topRightRadius": 0,
+                    "bottomLeftRadius": 0,
+                    "bottomRightRadius": 0,
+                    "children": [
+                      {
+                        "id": "571:2498",
+                        "name": "SPEC_VOLUME",
+                        "type": "FRAME",
+                        "x": 0,
+                        "y": 0,
+                        "width": 93,
+                        "height": 13,
+                        "rotation": 0,
+                        "opacity": 1,
+                        "blendMode": "PASS_THROUGH",
+                        "isMask": false,
+                        "isComponent": true,
+                        "strokeWeight": 1,
+                        "strokeAlign": "INSIDE",
+                        "constraints": {
+                          "horizontal": "MIN",
+                          "vertical": "MIN"
+                        },
+                        "layoutAlign": "INHERIT",
+                        "layoutGrow": 0,
+                        "clipsContent": false,
+                        "layoutMode": "HORIZONTAL",
+                        "primaryAxisSizingMode": "AUTO",
+                        "counterAxisSizingMode": "AUTO",
+                        "primaryAxisAlignItems": "MIN",
+                        "counterAxisAlignItems": "CENTER",
+                        "itemSpacing": 4,
+                        "itemReverseZIndex": false,
+                        "strokesIncludedInLayout": false,
+                        "paddingLeft": 0,
+                        "paddingRight": 0,
+                        "paddingTop": 0,
+                        "paddingBottom": 0,
+                        "cornerRadius": 0,
+                        "topLeftRadius": 0,
+                        "topRightRadius": 0,
+                        "bottomLeftRadius": 0,
+                        "bottomRightRadius": 0,
+                        "children": [
+                          {
+                            "id": "575:6",
+                            "name": "ICON_CUP",
+                            "type": "FRAME",
+                            "x": 0,
+                            "y": 0,
+                            "width": 13,
+                            "height": 13,
+                            "rotation": 0,
+                            "opacity": 1,
+                            "blendMode": "PASS_THROUGH",
+                            "isMask": false,
+                            "isComponent": true,
+                            "strokeWeight": 1,
+                            "strokeAlign": "INSIDE",
+                            "constraints": {
+                              "horizontal": "MIN",
+                              "vertical": "MIN"
+                            },
+                            "layoutAlign": "INHERIT",
+                            "layoutGrow": 0,
+                            "clipsContent": false,
+                            "layoutMode": "NONE",
+                            "primaryAxisSizingMode": "AUTO",
+                            "counterAxisSizingMode": "FIXED",
+                            "primaryAxisAlignItems": "MIN",
+                            "counterAxisAlignItems": "MIN",
+                            "itemSpacing": 0,
+                            "itemReverseZIndex": false,
+                            "strokesIncludedInLayout": false,
+                            "paddingLeft": 0,
+                            "paddingRight": 0,
+                            "paddingTop": 0,
+                            "paddingBottom": 0,
+                            "cornerRadius": 0,
+                            "topLeftRadius": 0,
+                            "topRightRadius": 0,
+                            "bottomLeftRadius": 0,
+                            "bottomRightRadius": 0,
+                            "children": [
+                              {
+                                "id": "571:2500",
+                                "name": "Vector 6",
+                                "type": "VECTOR",
+                                "x": 0.63427734375,
+                                "y": 4.5732598304748535,
+                                "width": 11.793160438537598,
+                                "height": 8.148117065429688,
+                                "rotation": 0,
+                                "opacity": 1,
+                                "blendMode": "PASS_THROUGH",
+                                "isMask": false,
+                                "isVectorAsset": true,
+                                "isComponent": false,
+                                "fills": [
+                                  {
+                                    "type": "SOLID",
+                                    "visible": true,
+                                    "opacity": 1,
+                                    "blendMode": "NORMAL",
+                                    "color": {
+                                      "r": 1,
+                                      "g": 0.250980406999588,
+                                      "b": 0
+                                    },
+                                    "boundVariables": {}
+                                  }
+                                ],
+                                "strokeWeight": 1,
+                                "strokeAlign": "CENTER",
+                                "constraints": {
+                                  "horizontal": "MIN",
+                                  "vertical": "MIN"
+                                },
+                                "layoutAlign": "INHERIT",
+                                "layoutGrow": 0
+                              },
+                              {
+                                "id": "571:2501",
+                                "name": "Vector 2",
+                                "type": "VECTOR",
+                                "x": 0,
+                                "y": 0,
+                                "width": 13,
+                                "height": 13,
+                                "rotation": 0,
+                                "opacity": 1,
+                                "blendMode": "PASS_THROUGH",
+                                "isMask": false,
+                                "isVectorAsset": true,
+                                "isComponent": false,
+                                "strokes": [
+                                  {
+                                    "type": "SOLID",
+                                    "visible": true,
+                                    "opacity": 1,
+                                    "blendMode": "NORMAL",
+                                    "color": {
+                                      "r": 0.9882352948188782,
+                                      "g": 0.9607843160629272,
+                                      "b": 0.8980392217636108
+                                    },
+                                    "boundVariables": {}
+                                  }
+                                ],
+                                "strokeWeight": 1,
+                                "strokeAlign": "CENTER",
+                                "constraints": {
+                                  "horizontal": "MIN",
+                                  "vertical": "MIN"
+                                },
+                                "layoutAlign": "INHERIT",
+                                "layoutGrow": 0
+                              },
+                              {
+                                "id": "571:2502",
+                                "name": "Vector 3",
+                                "type": "VECTOR",
+                                "x": 0,
+                                "y": -0.00006985664367675781,
+                                "width": 5.073171138763428,
+                                "height": 0,
+                                "rotation": 0,
+                                "opacity": 1,
+                                "blendMode": "PASS_THROUGH",
+                                "isMask": false,
+                                "isVectorAsset": true,
+                                "isComponent": false,
+                                "strokes": [
+                                  {
+                                    "type": "SOLID",
+                                    "visible": true,
+                                    "opacity": 1,
+                                    "blendMode": "NORMAL",
+                                    "color": {
+                                      "r": 0.9882352948188782,
+                                      "g": 0.9607843160629272,
+                                      "b": 0.8980392217636108
+                                    },
+                                    "boundVariables": {}
+                                  }
+                                ],
+                                "strokeWeight": 1,
+                                "strokeAlign": "CENTER",
+                                "constraints": {
+                                  "horizontal": "MIN",
+                                  "vertical": "MIN"
+                                },
+                                "layoutAlign": "INHERIT",
+                                "layoutGrow": 0
+                              },
+                              {
+                                "id": "571:2503",
+                                "name": "Vector 4",
+                                "type": "VECTOR",
+                                "x": 0,
+                                "y": 0.0001220703125,
+                                "width": 5.073171138763428,
+                                "height": 0,
+                                "rotation": 0,
+                                "opacity": 1,
+                                "blendMode": "PASS_THROUGH",
+                                "isMask": false,
+                                "isVectorAsset": true,
+                                "isComponent": false,
+                                "strokes": [
+                                  {
+                                    "type": "SOLID",
+                                    "visible": true,
+                                    "opacity": 1,
+                                    "blendMode": "NORMAL",
+                                    "color": {
+                                      "r": 0.9882352948188782,
+                                      "g": 0.9607843160629272,
+                                      "b": 0.8980392217636108
+                                    },
+                                    "boundVariables": {}
+                                  }
+                                ],
+                                "strokeWeight": 1,
+                                "strokeAlign": "CENTER",
+                                "constraints": {
+                                  "horizontal": "MIN",
+                                  "vertical": "MIN"
+                                },
+                                "layoutAlign": "INHERIT",
+                                "layoutGrow": 0
+                              },
+                              {
+                                "id": "571:2504",
+                                "name": "Vector 5",
+                                "type": "VECTOR",
+                                "x": 0,
+                                "y": 0.00006961822509765625,
+                                "width": 5.073171138763428,
+                                "height": 0,
+                                "rotation": 0,
+                                "opacity": 1,
+                                "blendMode": "PASS_THROUGH",
+                                "isMask": false,
+                                "isVectorAsset": true,
+                                "isComponent": false,
+                                "strokes": [
+                                  {
+                                    "type": "SOLID",
+                                    "visible": true,
+                                    "opacity": 1,
+                                    "blendMode": "NORMAL",
+                                    "color": {
+                                      "r": 0.9882352948188782,
+                                      "g": 0.9607843160629272,
+                                      "b": 0.8980392217636108
+                                    },
+                                    "boundVariables": {}
+                                  }
+                                ],
+                                "strokeWeight": 1,
+                                "strokeAlign": "CENTER",
+                                "constraints": {
+                                  "horizontal": "MIN",
+                                  "vertical": "MIN"
+                                },
+                                "layoutAlign": "INHERIT",
+                                "layoutGrow": 0
+                              }
+                            ]
+                          },
+                          {
+                            "id": "571:2505",
+                            "name": "Iced brew volume",
+                            "type": "TEXT",
+                            "x": 17,
+                            "y": 1.5,
+                            "width": 76,
+                            "height": 10,
+                            "rotation": 0,
+                            "opacity": 1,
+                            "blendMode": "PASS_THROUGH",
+                            "isMask": false,
+                            "isComponent": false,
+                            "fills": [
+                              {
+                                "type": "SOLID",
+                                "visible": true,
+                                "opacity": 1,
+                                "blendMode": "NORMAL",
+                                "color": {
+                                  "r": 0.9882352948188782,
+                                  "g": 0.9607843160629272,
+                                  "b": 0.8980392217636108
+                                },
+                                "boundVariables": {}
+                              }
+                            ],
+                            "strokeWeight": 1,
+                            "strokeAlign": "OUTSIDE",
+                            "constraints": {
+                              "horizontal": "MIN",
+                              "vertical": "MIN"
+                            },
+                            "layoutAlign": "INHERIT",
+                            "layoutGrow": 0,
+                            "text": "150ml+ICE",
+                            "fontSize": 14,
+                            "fontName": {
+                              "family": "IBM Plex Mono",
+                              "style": "Medium"
+                            },
+                            "fontWeight": 500,
+                            "textAlign": "LEFT",
+                            "textAlignVertical": "TOP",
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "lineHeight": {
+                              "unit": "AUTO"
+                            },
+                            "letterSpacing": {
+                              "unit": "PERCENT",
+                              "value": 0
+                            },
+                            "textDecoration": "NONE"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "571:2506",
+                        "name": "SPEC_TEMP",
+                        "type": "FRAME",
+                        "x": 101,
+                        "y": 0,
+                        "width": 50,
+                        "height": 14,
+                        "rotation": 0,
+                        "opacity": 1,
+                        "blendMode": "PASS_THROUGH",
+                        "isMask": false,
+                        "isComponent": true,
+                        "strokeWeight": 1,
+                        "strokeAlign": "INSIDE",
+                        "constraints": {
+                          "horizontal": "MIN",
+                          "vertical": "MIN"
+                        },
+                        "layoutAlign": "INHERIT",
+                        "layoutGrow": 0,
+                        "clipsContent": false,
+                        "layoutMode": "HORIZONTAL",
+                        "primaryAxisSizingMode": "AUTO",
+                        "counterAxisSizingMode": "AUTO",
+                        "primaryAxisAlignItems": "MIN",
+                        "counterAxisAlignItems": "CENTER",
+                        "itemSpacing": 2,
+                        "itemReverseZIndex": false,
+                        "strokesIncludedInLayout": false,
+                        "paddingLeft": 0,
+                        "paddingRight": 0,
+                        "paddingTop": 0,
+                        "paddingBottom": 0,
+                        "cornerRadius": 0,
+                        "topLeftRadius": 0,
+                        "topRightRadius": 0,
+                        "bottomLeftRadius": 0,
+                        "bottomRightRadius": 0,
+                        "children": [
+                          {
+                            "id": "571:2507",
+                            "name": "Thermometer",
+                            "type": "FRAME",
+                            "x": 0,
+                            "y": 0,
+                            "width": 14,
+                            "height": 14,
+                            "rotation": 0,
+                            "opacity": 1,
+                            "blendMode": "PASS_THROUGH",
+                            "isMask": false,
+                            "isComponent": false,
+                            "fills": [
+                              {
+                                "type": "SOLID",
+                                "visible": false,
+                                "opacity": 1,
+                                "blendMode": "NORMAL",
+                                "color": {
+                                  "r": 1,
+                                  "g": 1,
+                                  "b": 1
+                                },
+                                "boundVariables": {}
+                              }
+                            ],
+                            "strokeWeight": 1,
+                            "strokeAlign": "INSIDE",
+                            "constraints": {
+                              "horizontal": "MIN",
+                              "vertical": "MIN"
+                            },
+                            "layoutAlign": "INHERIT",
+                            "layoutGrow": 0,
+                            "clipsContent": false,
+                            "layoutMode": "NONE",
+                            "primaryAxisSizingMode": "AUTO",
+                            "counterAxisSizingMode": "FIXED",
+                            "primaryAxisAlignItems": "MIN",
+                            "counterAxisAlignItems": "MIN",
+                            "itemSpacing": 0,
+                            "itemReverseZIndex": false,
+                            "strokesIncludedInLayout": false,
+                            "paddingLeft": 0,
+                            "paddingRight": 0,
+                            "paddingTop": 0,
+                            "paddingBottom": 0,
+                            "cornerRadius": 0,
+                            "topLeftRadius": 0,
+                            "topRightRadius": 0,
+                            "bottomLeftRadius": 0,
+                            "bottomRightRadius": 0,
+                            "children": [
+                              {
+                                "id": "571:2508",
+                                "name": "Icon",
+                                "type": "VECTOR",
+                                "x": 4.375,
+                                "y": 0.875,
+                                "width": 5.25,
+                                "height": 12.834300994873047,
+                                "rotation": 0,
+                                "opacity": 1,
+                                "blendMode": "PASS_THROUGH",
+                                "isMask": false,
+                                "isVectorAsset": true,
+                                "isComponent": false,
+                                "strokes": [
+                                  {
+                                    "type": "SOLID",
+                                    "visible": true,
+                                    "opacity": 1,
+                                    "blendMode": "NORMAL",
+                                    "color": {
+                                      "r": 0.9882352948188782,
+                                      "g": 0.9607843160629272,
+                                      "b": 0.8980392217636108
+                                    },
+                                    "boundVariables": {}
+                                  }
+                                ],
+                                "strokeWeight": 1,
+                                "strokeAlign": "OUTSIDE",
+                                "constraints": {
+                                  "horizontal": "SCALE",
+                                  "vertical": "CENTER"
+                                },
+                                "layoutAlign": "INHERIT",
+                                "layoutGrow": 0
+                              },
+                              {
+                                "id": "575:8",
+                                "name": "ICON_THERMOMETER",
+                                "type": "FRAME",
+                                "x": 5.25,
+                                "y": 4,
+                                "width": 3.5,
+                                "height": 8.97509765625,
+                                "rotation": 0,
+                                "opacity": 1,
+                                "blendMode": "PASS_THROUGH",
+                                "isMask": false,
+                                "isComponent": true,
+                                "strokeWeight": 1,
+                                "strokeAlign": "INSIDE",
+                                "constraints": {
+                                  "horizontal": "MIN",
+                                  "vertical": "MIN"
+                                },
+                                "layoutAlign": "INHERIT",
+                                "layoutGrow": 0,
+                                "clipsContent": false,
+                                "layoutMode": "NONE",
+                                "primaryAxisSizingMode": "AUTO",
+                                "counterAxisSizingMode": "FIXED",
+                                "primaryAxisAlignItems": "MIN",
+                                "counterAxisAlignItems": "MIN",
+                                "itemSpacing": 0,
+                                "itemReverseZIndex": false,
+                                "strokesIncludedInLayout": false,
+                                "paddingLeft": 0,
+                                "paddingRight": 0,
+                                "paddingTop": 0,
+                                "paddingBottom": 0,
+                                "cornerRadius": 0,
+                                "topLeftRadius": 0,
+                                "topRightRadius": 0,
+                                "bottomLeftRadius": 0,
+                                "bottomRightRadius": 0,
+                                "children": [
+                                  {
+                                    "id": "571:2510",
+                                    "name": "THERMO_TUBE",
+                                    "type": "RECTANGLE",
+                                    "x": 2.1875,
+                                    "y": 8.875,
+                                    "width": 0.875,
+                                    "height": 7.875,
+                                    "rotation": 179.99999499104388,
+                                    "opacity": 1,
+                                    "blendMode": "PASS_THROUGH",
+                                    "isMask": false,
+                                    "isComponent": true,
+                                    "fills": [
+                                      {
+                                        "type": "SOLID",
+                                        "visible": true,
+                                        "opacity": 1,
+                                        "blendMode": "NORMAL",
+                                        "color": {
+                                          "r": 1,
+                                          "g": 0.250980406999588,
+                                          "b": 0
+                                        },
+                                        "boundVariables": {}
+                                      }
+                                    ],
+                                    "strokeWeight": 1,
+                                    "strokeAlign": "INSIDE",
+                                    "constraints": {
+                                      "horizontal": "SCALE",
+                                      "vertical": "SCALE"
+                                    },
+                                    "layoutAlign": "INHERIT",
+                                    "layoutGrow": 0
+                                  },
+                                  {
+                                    "id": "571:2511",
+                                    "name": "THERMO_BULB",
+                                    "type": "ELLIPSE",
+                                    "x": 3.5,
+                                    "y": 8.875,
+                                    "width": 3.5,
+                                    "height": 3.5,
+                                    "rotation": 179.99999499104388,
+                                    "opacity": 1,
+                                    "blendMode": "PASS_THROUGH",
+                                    "isMask": false,
+                                    "isComponent": true,
+                                    "fills": [
+                                      {
+                                        "type": "SOLID",
+                                        "visible": true,
+                                        "opacity": 1,
+                                        "blendMode": "NORMAL",
+                                        "color": {
+                                          "r": 1,
+                                          "g": 0.250980406999588,
+                                          "b": 0
+                                        },
+                                        "boundVariables": {}
+                                      }
+                                    ],
+                                    "strokeWeight": 1,
+                                    "strokeAlign": "INSIDE",
+                                    "constraints": {
+                                      "horizontal": "SCALE",
+                                      "vertical": "CENTER"
+                                    },
+                                    "layoutAlign": "INHERIT",
+                                    "layoutGrow": 0
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "id": "571:2512",
+                            "name": "Iced brew temperature",
+                            "type": "TEXT",
+                            "x": 16,
+                            "y": 2,
+                            "width": 34,
+                            "height": 10,
+                            "rotation": 0,
+                            "opacity": 1,
+                            "blendMode": "PASS_THROUGH",
+                            "isMask": false,
+                            "isComponent": false,
+                            "fills": [
+                              {
+                                "type": "SOLID",
+                                "visible": true,
+                                "opacity": 1,
+                                "blendMode": "NORMAL",
+                                "color": {
+                                  "r": 0.9882352948188782,
+                                  "g": 0.9607843160629272,
+                                  "b": 0.8980392217636108
+                                },
+                                "boundVariables": {}
+                              }
+                            ],
+                            "strokeWeight": 1,
+                            "strokeAlign": "OUTSIDE",
+                            "constraints": {
+                              "horizontal": "MIN",
+                              "vertical": "MIN"
+                            },
+                            "layoutAlign": "INHERIT",
+                            "layoutGrow": 0,
+                            "text": "98ºC ",
+                            "fontSize": 14,
+                            "fontName": {
+                              "family": "IBM Plex Mono",
+                              "style": "Medium"
+                            },
+                            "fontWeight": 500,
+                            "textAlign": "LEFT",
+                            "textAlignVertical": "TOP",
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "lineHeight": {
+                              "unit": "AUTO"
+                            },
+                            "letterSpacing": {
+                              "unit": "PERCENT",
+                              "value": 0
+                            },
+                            "textDecoration": "NONE"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "571:2513",
+                        "name": "SPEC_TIME",
+                        "type": "FRAME",
+                        "x": 159,
+                        "y": 0,
+                        "width": 52,
+                        "height": 14,
+                        "rotation": 0,
+                        "opacity": 1,
+                        "blendMode": "PASS_THROUGH",
+                        "isMask": false,
+                        "isComponent": true,
+                        "strokeWeight": 1,
+                        "strokeAlign": "INSIDE",
+                        "constraints": {
+                          "horizontal": "MIN",
+                          "vertical": "MIN"
+                        },
+                        "layoutAlign": "INHERIT",
+                        "layoutGrow": 0,
+                        "clipsContent": false,
+                        "layoutMode": "HORIZONTAL",
+                        "primaryAxisSizingMode": "AUTO",
+                        "counterAxisSizingMode": "AUTO",
+                        "primaryAxisAlignItems": "MIN",
+                        "counterAxisAlignItems": "CENTER",
+                        "itemSpacing": 4,
+                        "itemReverseZIndex": false,
+                        "strokesIncludedInLayout": false,
+                        "paddingLeft": 0,
+                        "paddingRight": 0,
+                        "paddingTop": 0,
+                        "paddingBottom": 0,
+                        "cornerRadius": 0,
+                        "topLeftRadius": 0,
+                        "topRightRadius": 0,
+                        "bottomLeftRadius": 0,
+                        "bottomRightRadius": 0,
+                        "children": [
+                          {
+                            "id": "571:2514",
+                            "name": "Clock",
+                            "type": "FRAME",
+                            "x": 0,
+                            "y": 0,
+                            "width": 14,
+                            "height": 14,
+                            "rotation": 0,
+                            "opacity": 1,
+                            "blendMode": "PASS_THROUGH",
+                            "isMask": false,
+                            "isComponent": false,
+                            "fills": [
+                              {
+                                "type": "SOLID",
+                                "visible": false,
+                                "opacity": 1,
+                                "blendMode": "NORMAL",
+                                "color": {
+                                  "r": 1,
+                                  "g": 1,
+                                  "b": 1
+                                },
+                                "boundVariables": {}
+                              }
+                            ],
+                            "strokeWeight": 1,
+                            "strokeAlign": "INSIDE",
+                            "constraints": {
+                              "horizontal": "MIN",
+                              "vertical": "MIN"
+                            },
+                            "layoutAlign": "INHERIT",
+                            "layoutGrow": 0,
+                            "clipsContent": false,
+                            "layoutMode": "NONE",
+                            "primaryAxisSizingMode": "AUTO",
+                            "counterAxisSizingMode": "FIXED",
+                            "primaryAxisAlignItems": "MIN",
+                            "counterAxisAlignItems": "MIN",
+                            "itemSpacing": 0,
+                            "itemReverseZIndex": false,
+                            "strokesIncludedInLayout": false,
+                            "paddingLeft": 0,
+                            "paddingRight": 0,
+                            "paddingTop": 0,
+                            "paddingBottom": 0,
+                            "cornerRadius": 0,
+                            "topLeftRadius": 0,
+                            "topRightRadius": 0,
+                            "bottomLeftRadius": 0,
+                            "bottomRightRadius": 0,
+                            "children": [
+                              {
+                                "id": "571:2515",
+                                "name": "Icon",
+                                "type": "VECTOR",
+                                "x": 1,
+                                "y": 1,
+                                "width": 11.666666984558105,
+                                "height": 11.666666984558105,
+                                "rotation": 0,
+                                "opacity": 1,
+                                "blendMode": "PASS_THROUGH",
+                                "isMask": false,
+                                "isVectorAsset": true,
+                                "isComponent": false,
+                                "strokes": [
+                                  {
+                                    "type": "SOLID",
+                                    "visible": true,
+                                    "opacity": 1,
+                                    "blendMode": "NORMAL",
+                                    "color": {
+                                      "r": 0.9882352948188782,
+                                      "g": 0.9607843160629272,
+                                      "b": 0.8980392217636108
+                                    },
+                                    "boundVariables": {}
+                                  }
+                                ],
+                                "strokeWeight": 1,
+                                "strokeAlign": "CENTER",
+                                "constraints": {
+                                  "horizontal": "SCALE",
+                                  "vertical": "SCALE"
+                                },
+                                "layoutAlign": "INHERIT",
+                                "layoutGrow": 0
+                              },
+                              {
+                                "id": "571:2516",
+                                "name": "Vector 1",
+                                "type": "VECTOR",
+                                "x": 6.800048828125,
+                                "y": 3,
+                                "width": 0,
+                                "height": 3.800048828125,
+                                "rotation": 0,
+                                "opacity": 1,
+                                "blendMode": "PASS_THROUGH",
+                                "isMask": false,
+                                "isVectorAsset": true,
+                                "isComponent": false,
+                                "strokes": [
+                                  {
+                                    "type": "SOLID",
+                                    "visible": true,
+                                    "opacity": 1,
+                                    "blendMode": "NORMAL",
+                                    "color": {
+                                      "r": 1,
+                                      "g": 0.250980406999588,
+                                      "b": 0
+                                    },
+                                    "boundVariables": {}
+                                  }
+                                ],
+                                "strokeWeight": 1,
+                                "strokeAlign": "CENTER",
+                                "constraints": {
+                                  "horizontal": "MIN",
+                                  "vertical": "MIN"
+                                },
+                                "layoutAlign": "INHERIT",
+                                "layoutGrow": 0
+                              }
+                            ]
+                          },
+                          {
+                            "id": "571:2517",
+                            "name": "Iced brew time",
+                            "type": "TEXT",
+                            "x": 18,
+                            "y": 2,
+                            "width": 34,
+                            "height": 10,
+                            "rotation": 0,
+                            "opacity": 1,
+                            "blendMode": "PASS_THROUGH",
+                            "isMask": false,
+                            "isComponent": false,
+                            "fills": [
+                              {
+                                "type": "SOLID",
+                                "visible": true,
+                                "opacity": 1,
+                                "blendMode": "NORMAL",
+                                "color": {
+                                  "r": 0.9882352948188782,
+                                  "g": 0.9607843160629272,
+                                  "b": 0.8980392217636108
+                                },
+                                "boundVariables": {}
+                              }
+                            ],
+                            "strokeWeight": 1,
+                            "strokeAlign": "OUTSIDE",
+                            "constraints": {
+                              "horizontal": "MIN",
+                              "vertical": "MIN"
+                            },
+                            "layoutAlign": "INHERIT",
+                            "layoutGrow": 0,
+                            "text": "4min ",
+                            "fontSize": 14,
+                            "fontName": {
+                              "family": "IBM Plex Mono",
+                              "style": "Medium"
+                            },
+                            "fontWeight": 500,
+                            "textAlign": "LEFT",
+                            "textAlignVertical": "TOP",
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "lineHeight": {
+                              "unit": "AUTO"
+                            },
+                            "letterSpacing": {
+                              "unit": "PERCENT",
+                              "value": 0
+                            },
+                            "textDecoration": "NONE"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "571:2545",
+        "name": "Tea subtitle",
+        "type": "TEXT",
+        "x": 24,
+        "y": 113,
+        "width": 526,
+        "height": 34,
+        "rotation": 0,
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "isComponent": false,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9882352948188782,
+              "g": 0.9607843160629272,
+              "b": 0.8980392217636108
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1,
+        "strokeAlign": "OUTSIDE",
+        "constraints": {
+          "horizontal": "MIN",
+          "vertical": "MIN"
+        },
+        "layoutAlign": "STRETCH",
+        "layoutGrow": 0,
+        "text": "\nTexture of Mist",
+        "fontSize": 18,
+        "fontName": {
+          "family": "Pretendard",
+          "style": "Medium"
+        },
+        "fontWeight": 500,
+        "textAlign": "LEFT",
+        "textAlignVertical": "TOP",
+        "textAutoResize": "HEIGHT",
+        "lineHeight": {
+          "unit": "AUTO"
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "textDecoration": "NONE"
+      },
+      {
+        "id": "571:2601",
+        "name": "Tea text",
+        "type": "TEXT",
+        "x": 24,
+        "y": 163,
+        "width": 526,
+        "height": 28,
+        "rotation": 0,
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "isComponent": false,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9882352948188782,
+              "g": 0.9607843160629272,
+              "b": 0.8980392217636108
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1,
+        "strokeAlign": "OUTSIDE",
+        "constraints": {
+          "horizontal": "MIN",
+          "vertical": "MIN"
+        },
+        "layoutAlign": "STRETCH",
+        "layoutGrow": 0,
+        "text": "Alishan Jin Xuan tea offers a dramatic inversion: a naturally milky, velvety aroma developed to survive the 1,600m alpine freeze. Crisp at first, comforting to the end.",
+        "fontSize": 14,
+        "fontName": {
+          "family": "Pretendard",
+          "style": "Regular"
+        },
+        "fontWeight": 400,
+        "textAlign": "LEFT",
+        "textAlignVertical": "TOP",
+        "textAutoResize": "HEIGHT",
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 18
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "textDecoration": "NONE"
+      }
+    ]
+  }
+}

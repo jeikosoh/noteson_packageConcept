@@ -1,0 +1,21 @@
+{
+  "name": "002_notes_on",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@builder.io/cli": "^1.2.10",
+    "@builder.io/sdk": "^6.3.0"
+  },
+  "dependencies": {
+    "jsdom": "^27.0.1",
+    "puppeteer": "^25.3.0"
+  }
+}

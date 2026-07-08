@@ -1,0 +1,200 @@
+{
+  "texts": {
+    "seasonal_tea": "SEASONAL TEA :",
+    "milky_oolong": "MILKY OOLONG"
+  },
+  "colors": {
+    "label_box": "#ff4000",
+    "seasonal_tea": "#000000",
+    "milky_oolong": "#000000"
+  },
+  "tree": {
+    "id": "705:1797",
+    "name": "DYNAMIC_LABEL",
+    "type": "FRAME",
+    "x": 5633.5,
+    "y": 5046,
+    "width": 1827.5,
+    "height": 351,
+    "rotation": 0,
+    "opacity": 1,
+    "blendMode": "PASS_THROUGH",
+    "isMask": false,
+    "isComponent": true,
+    "strokeWeight": 1,
+    "strokeAlign": "INSIDE",
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "layoutAlign": "INHERIT",
+    "layoutGrow": 0,
+    "clipsContent": true,
+    "layoutMode": "NONE",
+    "primaryAxisSizingMode": "AUTO",
+    "counterAxisSizingMode": "FIXED",
+    "primaryAxisAlignItems": "MIN",
+    "counterAxisAlignItems": "MIN",
+    "itemSpacing": 0,
+    "itemReverseZIndex": false,
+    "strokesIncludedInLayout": false,
+    "paddingLeft": 0,
+    "paddingRight": 0,
+    "paddingTop": 0,
+    "paddingBottom": 0,
+    "cornerRadius": 0,
+    "topLeftRadius": 0,
+    "topRightRadius": 0,
+    "bottomLeftRadius": 0,
+    "bottomRightRadius": 0,
+    "children": [
+      {
+        "id": "705:1792",
+        "name": "label_box",
+        "type": "VECTOR",
+        "x": 0,
+        "y": 0,
+        "width": 907,
+        "height": 133,
+        "rotation": 0,
+        "opacity": 0.949999988079071,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "isVectorAsset": true,
+        "isComponent": false,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 0.250980406999588,
+              "b": 0
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "constraints": {
+          "horizontal": "MIN",
+          "vertical": "MIN"
+        },
+        "layoutAlign": "INHERIT",
+        "layoutGrow": 0
+      },
+      {
+        "id": "705:1794",
+        "name": "SEASONAL TEA :",
+        "type": "TEXT",
+        "x": 38.5,
+        "y": 36,
+        "width": 790,
+        "height": 68,
+        "rotation": 0,
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "isComponent": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1,
+        "strokeAlign": "OUTSIDE",
+        "constraints": {
+          "horizontal": "MIN",
+          "vertical": "MIN"
+        },
+        "layoutAlign": "INHERIT",
+        "layoutGrow": 0,
+        "text": "SEASONAL TEA :",
+        "fontSize": 96,
+        "fontName": {
+          "family": "Pretendard",
+          "style": "Bold"
+        },
+        "fontWeight": 700,
+        "textAlign": "LEFT",
+        "textAlignVertical": "TOP",
+        "textAutoResize": "WIDTH_AND_HEIGHT",
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 96
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 2
+        },
+        "textDecoration": "NONE"
+      },
+      {
+        "id": "705:1796",
+        "name": "MILKY OOLONG",
+        "type": "TEXT",
+        "x": 0.5,
+        "y": 181,
+        "width": 1827,
+        "height": 170,
+        "rotation": 0,
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "isComponent": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1,
+        "strokeAlign": "OUTSIDE",
+        "constraints": {
+          "horizontal": "MIN",
+          "vertical": "MIN"
+        },
+        "layoutAlign": "INHERIT",
+        "layoutGrow": 0,
+        "text": "MILKY OOLONG",
+        "fontSize": 240,
+        "fontName": {
+          "family": "Pretendard",
+          "style": "Bold"
+        },
+        "fontWeight": 700,
+        "textAlign": "LEFT",
+        "textAlignVertical": "TOP",
+        "textAutoResize": "WIDTH_AND_HEIGHT",
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 96
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 1
+        },
+        "textDecoration": "NONE"
+      }
+    ]
+  }
+}
