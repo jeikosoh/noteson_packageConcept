@@ -149,19 +149,18 @@ body {
   flex: 1;
   aspect-ratio: 16 / 10;
   max-height: 60vh;
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
   position: relative;
 }
 
 html.dark-mode .slide-viewport {
-  background-color: rgba(0, 0, 0, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+  box-shadow: none;
 }
 
 .slide-stage {
@@ -179,7 +178,7 @@ html.dark-mode .slide-viewport {
   object-fit: contain;
   border-radius: 8px;
   user-select: none;
-  transform: scale(1.05); /* 상하단 템플릿 선 크롭용 미세 확대 */
+  clip-path: inset(2.5% 0 2.5% 0); /* 상하단 템플릿 가이드 선 및 + 기호 크롭 */
 }
 
 /* 컨트롤 네비게이션 버튼 */
