@@ -20,3 +20,8 @@ temp2.js
 recovered_*
 extracted_*
 figma-dump.json
+.smtcmp_json_db/
+.smtcmp_vector_db.tar.gz
+.obsidian/
+.agents/
+

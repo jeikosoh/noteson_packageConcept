@@ -1,8 +1,10 @@
-# 02_DESIGN_ANALYSIS
+# 🎨 02. 디자인 분석서 (Design Analysis)
+
+[← 프로젝트 개요]([[NOTES_ON_WEB]]) | [← 전체 프로젝트 맵]([[00_NOTES_ON_MAP]])
 
 이 문서는 "NOTES ON NYC" 브랜드가 지향하는 시각적 톤앤매너와 무드 보드(REFERENCE) 이미지를 분석하고, 이를 웹 UI에 적용하기 위한 디자인 스펙을 정의합니다.
 
-## 🎨 Mood Board 분석 및 디자인 컨셉
+## 🎨 Mood Board 분석 및 디자인 컨셉 ([[REFERENCES|무드보드 상세 보기]])
 
 제공해주신 무드 보드 이미지들을 종합적으로 학습한 결과, **"Swiss Graphic + Technical Industrial + Avant-garde Streetwear"** 감성이 융합된 매우 정교하고 실험적인 비주얼 스타일이 도출되었습니다.
 
@@ -28,4 +30,4 @@
 
 
 ---
-*Prev: [01_ROADMAP](file:///Users/jeikosoh/Work%20Station/002_NOTES_ON/NOTES_ON_WEB/01_ROADMAP.md) | Next: [03_WEB_SPECIFICATION](file:///Users/jeikosoh/Work%20Station/002_NOTES_ON/NOTES_ON_WEB/03_WEB_SPECIFICATION.md)*
+*Prev: [[01_ROADMAP|01. 로드맵]] | Next: [[03_WEB_SPECIFICATION|03. 웹 스펙]]*

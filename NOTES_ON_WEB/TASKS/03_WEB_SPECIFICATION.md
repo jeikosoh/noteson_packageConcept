@@ -1,4 +1,6 @@
-# 03_WEB_SPECIFICATION
+# 🖥️ 03. 웹 스펙 정의서 (Web Specification)
+
+[← 프로젝트 개요]([[NOTES_ON_WEB]]) | [← 전체 프로젝트 맵]([[00_NOTES_ON_MAP]])
 
 이 문서는 "NOTES ON NYC" 웹사이트의 페이지별 기능 요구사항과 구조적 설계 스펙을 다룹니다.
 
@@ -18,4 +20,4 @@
 *   **Contact Form**: 피드백 또는 비즈니스 문의를 보낼 수 있는 인터랙티브한 폼.
 
 ---
-*Prev: [02_DESIGN_ANALYSIS](file:///Users/jeikosoh/Work%20Station/002_NOTES_ON/NOTES_ON_WEB/02_DESIGN_ANALYSIS.md) | Next: [04_FIGMA_WORKFLOW](file:///Users/jeikosoh/Work%20Station/002_NOTES_ON/NOTES_ON_WEB/04_FIGMA_WORKFLOW.md)*
+*Prev: [[02_DESIGN_ANALYSIS|02. 디자인 분석서]] | Next: [[04_FIGMA_WORKFLOW|04. Figma 연동 가이드]]*

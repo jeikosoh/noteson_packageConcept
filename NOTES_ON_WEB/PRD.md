@@ -1,5 +1,7 @@
 # Product Requirements Document (PRD): NOTES ON WEB
 
+[← 프로젝트 개요]([[NOTES_ON_WEB]]) | [← 전체 프로젝트 맵]([[00_NOTES_ON_MAP]])
+
 ## 1. Project Overview
 **Name:** NOTES ON WEB
 **Description:** A sophisticated, interactive web application acting as a digital storefront/experience for a premium tea brand ("NOTES ON").
@@ -17,7 +19,7 @@
 ### 2.2 Floating Video Player (`#floating-vid-player`)
 - **Purpose:** Plays featured art films associated with the brand.
 - **Features:**
-  - Draggable interface via a custom drag handle.
+  - Draggable interface via a custom drag handle (with browser default cursor hidden and custom cursor changing to grab/grabbing).
   - Video play/pause toggle by clicking the screen (with an animated SVG icon).
   - Timecode box and dynamic progress bar (`.vid-progress-fill`) exactly centered horizontally between the timecode and right corner mark (`bot_mark`).
   - Animated data-processing dots (blinking randomly).
@@ -26,7 +28,7 @@
 ### 2.3 Interactive Product Cards
 - **Portrait Card (`.main-product-card[data-line-prefix="prod"]`)**
   - Displays featured seasonal tea.
-  - Draggable anywhere on the screen.
+  - Draggable anywhere on the screen. (Default browser cursor is hidden, custom cursor transitions to grab/grabbing).
   - Connected to screen corners via dotted SVG lines that turn solid (`stroke-dasharray: 0`) when interacted with.
 - **Landscape Card (`.landscape-card[data-line-prefix="land"]`)**
   - Similar draggable behavior but with a 4:3 landscape ratio.
@@ -55,6 +57,7 @@
 
 ## 4. Current Work & Status
 - **Recent Fixes & Refactoring:**
+  - Improved cursor UX on draggable elements (Floating Video Player and Product Cards) by hiding the default browser cursor (`cursor: none !important`) and updating the custom cursor (`#cursor-dot`) to transition to custom grab/grabbing SVG hand designs dynamically.
   - Migrated data persistence from local browser `localStorage` to **Firebase Cloud (Firestore for data, Firebase Storage for images)** to resolve storage quota limits and enable cross-device syncing.
   - Safely isolated 1200+ lines of monolithic JavaScript into independent `init*()` functions to ensure future code stability.
   - Re-aligned video player progress bar perfectly between timecode and bot mark (12px gap on both sides).

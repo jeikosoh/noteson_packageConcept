@@ -1,4 +1,6 @@
-# 04_FIGMA_WORKFLOW
+# 🔄 04. Figma 연동 워크플로우 (Figma Workflow)
+
+[← 프로젝트 개요]([[NOTES_ON_WEB]]) | [← 전체 프로젝트 맵]([[00_NOTES_ON_MAP]])
 
 이 문서는 Figma와 웹사이트 코드(HTML/CSS/JS) 간의 디자인 컴포넌트 양방향 연동(Sync)을 구현하고 편집 편의성을 확보하기 위한 워크플로우 가이드라인입니다.
 
@@ -20,4 +22,4 @@ Figma에서 디자인을 편집했을 때 코드가 자동 업데이트되고, �
     2. 동기화 스크립트(CLI 또는 API 연동)를 통해 CSS 변수값(`--color-primary`, `--font-family` 등)과 컴포넌트 레이아웃 코드가 프로젝트 파일에 덮어씌워지도록 워크플로우를 자동화합니다.
 
 ---
-*Prev: [03_WEB_SPECIFICATION](file:///Users/jeikosoh/Work%20Station/002_NOTES_ON/NOTES_ON_WEB/03_WEB_SPECIFICATION.md)*
+*Prev: [[03_WEB_SPECIFICATION|03. 웹 스펙 정의서]]*
