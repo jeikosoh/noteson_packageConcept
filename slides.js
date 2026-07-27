@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     currentIndex = 0;
 
     slides = Array.from({ length: totalSlides }, (_, i) => ({
-      src: `${deckInfo.folder}/slide${i + 1}.png`,
+      src: `${deckInfo.folder}/slide${i + 1}.png?v=4`,
       alt: `${deckInfo.name} - Slide ${i + 1}`
     }));
 
