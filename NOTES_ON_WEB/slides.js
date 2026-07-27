@@ -4,13 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnPrev = document.getElementById('btn-prev');
   const btnNext = document.getElementById('btn-next');
   const currentIndexDisplay = document.getElementById('current-index-display');
+  const totalCountDisplay = document.getElementById('total-count-display');
   const progressBarFill = document.getElementById('progress-bar-fill');
   const themeToggle = document.getElementById('theme-toggle');
   const themeText = themeToggle.querySelector('.theme-text');
   const sunIcon = themeToggle.querySelector('.sun-icon');
   const moonIcon = themeToggle.querySelector('.moon-icon');
-  const thumbItems = document.querySelectorAll('.thumb-item');
-  const thumbnailsContainer = document.querySelector('.thumbnails-container');
+  const thumbTrack = document.querySelector('.thumbnails-track');
+  const deckSelect = document.getElementById('deck-select');
 
   // 전체화면 관련 DOM
   const slidesApp = document.querySelector('.slides-app');
@@ -19,15 +20,87 @@ document.addEventListener('DOMContentLoaded', () => {
   const shrinkIcon = fullscreenToggle.querySelector('.shrink-icon');
   const fullscreenText = fullscreenToggle.querySelector('.fullscreen-text');
 
-  // === 2. 상태 변수 ===
-  let currentIndex = 0;
-  const totalSlides = thumbItems.length;
+  // === 2. 덱 구성 정보 ===
+  const decks = {
+    v1: {
+      name: "DECK 01: PACKAGE CONCEPT",
+      folder: "03_CONTENTS/slides_v1",
+      count: 9
+    },
+    v2: {
+      name: "DECK 02: PRODUCT LINE-UP",
+      folder: "03_CONTENTS/slides_v2",
+      count: 9
+    }
+  };
 
-  // 슬라이드 데이터 리스트
-  const slides = Array.from({ length: totalSlides }, (_, i) => ({
-    src: `03_CONTENTS/slides/slide${i + 1}.png`,
-    alt: `Slide ${i + 1}`
-  }));
+  // URL Query Param 파싱 (?deck=v1 or ?deck=v2)
+  const urlParams = new URLSearchParams(window.location.search);
+  let currentDeckKey = urlParams.get('deck') || 'v2';
+  if (!decks[currentDeckKey]) currentDeckKey = 'v2';
+
+  let currentIndex = 0;
+  let totalSlides = 9;
+  let slides = [];
+  let thumbItems = [];
+
+  function loadDeck(deckKey) {
+    const deckInfo = decks[deckKey];
+    totalSlides = deckInfo.count;
+    currentIndex = 0;
+
+    slides = Array.from({ length: totalSlides }, (_, i) => ({
+      src: `${deckInfo.folder}/slide${i + 1}.png`,
+      alt: `${deckInfo.name} - Slide ${i + 1}`
+    }));
+
+    if (totalCountDisplay) {
+      totalCountDisplay.textContent = String(totalSlides).padStart(2, '0');
+    }
+
+    // 썸네일 동적 생성
+    if (thumbTrack) {
+      thumbTrack.innerHTML = '';
+      slides.forEach((slide, i) => {
+        const btn = document.createElement('button');
+        btn.className = `thumb-item ${i === 0 ? 'active' : ''}`;
+        btn.setAttribute('data-index', i);
+        btn.setAttribute('aria-label', `슬라이드 ${i + 1}로 이동`);
+        btn.innerHTML = `
+          <img src="${slide.src}" alt="Thumbnail ${i + 1}">
+          <span class="thumb-num">${String(i + 1).padStart(2, '0')}</span>
+        `;
+        btn.addEventListener('click', () => {
+          if (i > currentIndex) {
+            goToSlide(i, 'forward');
+          } else if (i < currentIndex) {
+            goToSlide(i, 'backward');
+          }
+        });
+        thumbTrack.appendChild(btn);
+      });
+      thumbItems = thumbTrack.querySelectorAll('.thumb-item');
+    }
+
+    // 1번 슬라이드로 세팅
+    updateDOM(0);
+  }
+
+  if (deckSelect) {
+    deckSelect.value = currentDeckKey;
+    deckSelect.addEventListener('change', (e) => {
+      const selectedKey = e.target.value;
+      if (decks[selectedKey]) {
+        currentDeckKey = selectedKey;
+        const newUrl = `${window.location.pathname}?deck=${currentDeckKey}`;
+        window.history.pushState({ path: newUrl }, '', newUrl);
+        loadDeck(currentDeckKey);
+      }
+    });
+  }
+
+  // 초기 덱 로딩
+  loadDeck(currentDeckKey);
 
   // === 3. 테마 토글 (라이트 / 다크) ===
   const savedTheme = localStorage.getItem('noteson-slides-theme') || 'light';
@@ -93,21 +166,18 @@ document.addEventListener('DOMContentLoaded', () => {
   function goToSlide(newIndex, direction) {
     if (newIndex === currentIndex) return;
 
-    // 인덱스 범위 초과 방지 (순환 구조)
     if (newIndex < 0) {
       newIndex = totalSlides - 1;
     } else if (newIndex >= totalSlides) {
       newIndex = 0;
     }
 
-    // View Transition 미지원 브라우저 대응 Fallback
     if (!document.startViewTransition) {
       updateDOM(newIndex);
       currentIndex = newIndex;
       return;
     }
 
-    // 트랜지션 실행 및 방향(forward/backward) 주입
     document.startViewTransition({
       update: () => updateDOM(newIndex),
       types: [direction]
@@ -116,58 +186,41 @@ document.addEventListener('DOMContentLoaded', () => {
     currentIndex = newIndex;
   }
 
-  // DOM 갱신 기능 (View Transition 내부에서 호출됨)
+  // DOM 갱신 기능
   function updateDOM(newIndex) {
-    // 1. 메인 슬라이드 이미지 변경
+    if (!slides[newIndex]) return;
     activeSlideImg.src = slides[newIndex].src;
     activeSlideImg.alt = slides[newIndex].alt;
 
-    // 2. 카운터 디스플레이 갱신 (01, 02 포맷)
     const formattedNum = String(newIndex + 1).padStart(2, '0');
-    currentIndexDisplay.textContent = formattedNum;
+    if (currentIndexDisplay) currentIndexDisplay.textContent = formattedNum;
 
-    // 3. 프로그레스 바 갱신
     const progressPercent = ((newIndex + 1) / totalSlides) * 100;
-    progressBarFill.style.width = `${progressPercent}%`;
+    if (progressBarFill) progressBarFill.style.width = `${progressPercent}%`;
 
-    // 4. 썸네일 활성 클래스 갱신
-    thumbItems.forEach((item, idx) => {
-      if (idx === newIndex) {
-        item.classList.add('active');
-        // 활성화된 썸네일이 화면 영역에 보이도록 스크롤 동기화
-        item.scrollIntoView({
-          behavior: 'smooth',
-          block: 'nearest',
-          inline: 'center'
-        });
-      } else {
-        item.classList.remove('active');
-      }
-    });
+    if (thumbItems && thumbItems.length > 0) {
+      thumbItems.forEach((item, idx) => {
+        if (idx === newIndex) {
+          item.classList.add('active');
+          item.scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+            inline: 'center'
+          });
+        } else {
+          item.classList.remove('active');
+        }
+      });
+    }
   }
 
   // === 5. 이벤트 리스너 설정 ===
-  
-  // 이전 버튼 클릭
   btnPrev.addEventListener('click', () => {
     goToSlide(currentIndex - 1, 'backward');
   });
 
-  // 다음 버튼 클릭
   btnNext.addEventListener('click', () => {
     goToSlide(currentIndex + 1, 'forward');
-  });
-
-  // 썸네일 직접 클릭
-  thumbItems.forEach(item => {
-    item.addEventListener('click', () => {
-      const targetIndex = parseInt(item.getAttribute('data-index'), 10);
-      if (targetIndex > currentIndex) {
-        goToSlide(targetIndex, 'forward');
-      } else if (targetIndex < currentIndex) {
-        goToSlide(targetIndex, 'backward');
-      }
-    });
   });
 
   // === 6. 키보드 네비게이션 지원 ===
@@ -182,8 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // === 7. 모바일 터치 스와이프 지원 ===
   let touchStartX = 0;
   let touchEndX = 0;
-  const minSwipeDistance = 50; // 스와이프로 인식할 최소 거리 (픽셀)
-
+  const minSwipeDistance = 50;
   const slideViewport = document.querySelector('.slide-viewport');
 
   slideViewport.addEventListener('touchstart', (e) => {
@@ -199,10 +251,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const swipeDistance = touchEndX - touchStartX;
     if (Math.abs(swipeDistance) > minSwipeDistance) {
       if (swipeDistance > 0) {
-        // 오른쪽으로 스와이프 => 이전 슬라이드
         goToSlide(currentIndex - 1, 'backward');
       } else {
-        // 왼쪽으로 스와이프 => 다음 슬라이드
         goToSlide(currentIndex + 1, 'forward');
       }
     }
